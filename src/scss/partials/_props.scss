@@ -1,0 +1,38 @@
+.props {
+  border: 1px solid $color-e;
+}
+
+.props__item {
+  display: flex;
+  border-bottom: 1px solid $color-e;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.props__name {
+  width: 50%;
+  border-right: 1px solid $color-e;
+  font-weight: 800;
+  font-size: 0.6875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  color: $color-f;
+  padding: 11px 20px;
+  box-sizing: border-box;
+  @include media-breakpoint-down(md) {
+    padding: 10px;
+  }
+}
+
+.props__value {
+  width: 50%;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  box-sizing: border-box;
+  padding: 11px 21px 14px 30px;
+  @include media-breakpoint-down(md) {
+    padding: 10px;
+  }
+}

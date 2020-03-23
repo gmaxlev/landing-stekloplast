@@ -1,0 +1,9 @@
+.product-nav {
+  text-align: right;
+  position: relative;
+  margin-bottom: -35px;
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

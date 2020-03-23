@@ -1,0 +1,125 @@
+.intro {
+  border: 10px solid $color-a;
+  padding: 67px 59px 79px 59px;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 10px;
+    border-width: 7px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.intro__header {
+  font-weight: 800;
+  font-size: 3.125rem;
+  line-height: 3.75rem;
+  color: #fff;
+  max-width: 655px;
+  margin: 0;
+  padding: 0;
+  @include media-breakpoint-down(lg) {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+}
+
+.intro__promo {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin: 53px 0;
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include media-breakpoint-down(xs) {
+    margin: 30px 0;
+  }
+  & > img {
+    max-width: 100%;
+    margin-right: 15px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 10px;
+    }
+  }
+  b {
+    font-weight: 800;
+  }
+}
+
+.intro__decor {
+  position: absolute;
+  top: -75px;
+  bottom: 0;
+  right: 10px;
+  width: 38.87%;
+  @include media-breakpoint-down(md) {
+    top: 125px;
+    right: -25px;
+  }
+  @include media-breakpoint-down(sm) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: auto;
+    display: none;
+  }
+  & > img {
+    max-width: 100%;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+
+.intro__content {
+  width: 64%;
+  position: relative;
+  z-index: 100;
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.intro__badge {
+  position: absolute;
+}
+.intro__badge_2 {
+  bottom: -52px;
+  right: calc(100% + 17px);
+  @include media-breakpoint-down(md) {
+    bottom: -52px;
+    right: calc(100% - 29px);
+  }
+  @include media-breakpoint-down(sm) {
+    bottom: -71px;
+    right: 82px;
+  }
+}
+.intro__badge_1 {
+  bottom: 78px;
+  left: -39px;
+  @include media-breakpoint-down(sm) {
+    bottom: 5px;
+    right: 0;
+  }
+}

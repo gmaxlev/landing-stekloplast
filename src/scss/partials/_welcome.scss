@@ -1,0 +1,13 @@
+.welcome {
+  height: 850px;
+  background-image: url(../img/intro.png);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 200px 0;
+  box-sizing: border-box;
+  @include media-breakpoint-down(sm) {
+    padding: 100px 0 40px;
+    height: auto;
+  }
+}

@@ -1,0 +1,194 @@
+.button {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+}
+.button_a {
+  background-color: $color-a;
+  color: $color-b;
+  border: 0;
+  font-weight: 800;
+  padding: 21px 40px;
+  border-radius: 50px;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: lighten($color-a, 10%);
+  }
+}
+
+.button_b {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: $color-b;
+  text-transform: uppercase;
+  border: 0;
+  background-color: $color-a;
+  padding: 10px 25px;
+  min-width: 115px;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: lighten($color-a, 5%);
+  }
+}
+
+.button_c {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: #fff;
+  text-transform: uppercase;
+  border: 0;
+  background-color: $color-d;
+  padding: 10px 25px;
+  min-width: 115px;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: lighten($color-d, 5%);
+  }
+}
+
+.button_d {
+  font-weight: 800;
+  border-right: 1px solid $color-a;
+  border-left: 1px solid $color-a;
+  border-top: 0;
+  border-bottom: 0;
+  background-color: transparent;
+  padding: 21px 10px;
+  position: relative;
+  transition: background-color 0.5s, color 0.5s;
+  &:hover {
+    background-color: $color-a;
+    color: $color-b;
+  }
+  &::before {
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      $color-a 0,
+      $color-a 35%,
+      rgba(249, 198, 6, 0) 47%,
+      rgba(249, 198, 6, 0) 85%,
+      $color-a 97%,
+      $color-a 100%
+    );
+  }
+  &::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      $color-a 0,
+      $color-a 0%,
+      rgba(249, 198, 6, 0) 15%,
+      rgba(249, 198, 6, 0) 55%,
+      $color-a 67%,
+      $color-a 100%
+    );
+  }
+}
+
+.button_e {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.25rem;
+  color: $color-f;
+  border-right: 1px solid $color-f;
+  border-left: 1px solid $color-f;
+  border-top: 1px solid transparent;
+  text-align: left;
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
+  padding: 24px 15px;
+  padding-left: 97px;
+  position: relative;
+  transition: background-color 0.5s, color 0.5s;
+  box-sizing: border-box;
+  @include media-breakpoint-down(xs) {
+    padding: 15px;
+    padding-left: 60px;
+  }
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $color-f;
+    }
+  }
+  &::before {
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    transition: background-color 0.5s;
+    background: linear-gradient(
+      90deg,
+      $color-f 0,
+      $color-f 35%,
+      rgba(249, 198, 6, 0) 47%,
+      rgba(249, 198, 6, 0) 85%,
+      $color-f 97%,
+      $color-f 100%
+    );
+  }
+  &::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.5s;
+    background: linear-gradient(
+      90deg,
+      $color-f 0,
+      $color-f 0%,
+      rgba(249, 198, 6, 0) 15%,
+      rgba(249, 198, 6, 0) 55%,
+      $color-f 67%,
+      $color-f 100%
+    );
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 32px;
+    @include media-breakpoint-down(xs) {
+      left: 14px;
+      max-width: 29px;
+    }
+  }
+}
+
+.button_ebig {
+  padding-left: 80px;
+  @include media-breakpoint-down(xs) {
+    padding-left: 60px;
+  }
+}
+
+.button_f {
+  background-color: $color-a;
+  border: 0;
+  font-weight: 800;
+  color: $color-b;
+  border-radius: 50px;
+  padding: 21px 40px;
+  transition: background-color 0.5s;
+  &:hover {
+    content: "";
+    background-color: lighten($color: $color-a, $amount: 10%);
+  }
+}

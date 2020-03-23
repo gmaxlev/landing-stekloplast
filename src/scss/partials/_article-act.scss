@@ -1,0 +1,6 @@
+.article-act {
+  margin-top: 43px;
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}

@@ -1,0 +1,21 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -13px;
+}
+
+.contacts__item {
+  width: 50%;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 13px;
+  transition: opacity 0.5s;
+  &:hover {
+    opacity: 0.5;
+  }
+  & > span {
+    font-size: 1.0625rem;
+    color: #fff;
+    margin-left: 13px;
+  }
+}

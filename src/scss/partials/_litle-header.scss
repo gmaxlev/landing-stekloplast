@@ -1,0 +1,9 @@
+.litle-header {
+  font-weight: 800;
+  font-size: 1.625rem;
+  margin-top: 72px;
+  margin-bottom: 39px;
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}

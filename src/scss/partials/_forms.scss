@@ -1,0 +1,38 @@
+.forms {
+  display: flex;
+  justify-content: space-between;
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.forms__item {
+  // width: 33.3333333%;
+  // margin-right: 30px;
+  text-align: center;
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.forms__name {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+  margin-top: 12px;
+}
+
+.forms__img {
+  & > img {
+    max-width: 100%;
+  }
+}

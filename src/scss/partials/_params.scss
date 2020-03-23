@@ -1,0 +1,41 @@
+.params {
+  display: flex;
+  align-items: center;
+  margin-top: 58px;
+  justify-content: space-between;
+  position: relative;
+
+  @include media-breakpoint-down(lg) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-right: 0;
+  }
+}
+.params__item {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(lg) {
+    margin: 10px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.params__name {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: $color-f;
+  text-transform: uppercase;
+  margin-right: 10px;
+  white-space: nowrap;
+}

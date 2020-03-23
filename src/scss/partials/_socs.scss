@@ -1,0 +1,100 @@
+.socs {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.socs__item {
+  margin-right: 30px;
+  width: 69px;
+  height: 69px;
+  //   border: 1px solid $color-a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s;
+  position: relative;
+  @include media-breakpoint-down(xs) {
+    margin-right: 7px;
+    width: 50px;
+    height: 50px;
+  }
+  &:hover {
+    background-color: $color-a;
+    .svgspr {
+      fill: $color-j;
+      transition: fill 0.5s;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  .svgspr {
+    width: 27px;
+    height: 27px;
+    fill: $color-a;
+  }
+}
+
+.socs__lines {
+  span {
+    &:first-child {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(249, 198, 6, 0) 0%,
+          rgba(249, 198, 6, 1) 100%
+        );
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(249, 198, 6, 1) 0%,
+          rgba(249, 198, 6, 0) 100%
+        );
+      }
+    }
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: linear-gradient(
+          180deg,
+          rgba(249, 198, 6, 1) 0%,
+          rgba(249, 198, 6, 0) 100%
+        );
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 1px;
+        background: linear-gradient(
+          180deg,
+          rgba(249, 198, 6, 0) 0%,
+          rgba(249, 198, 6, 1) 100%
+        );
+      }
+    }
+  }
+}

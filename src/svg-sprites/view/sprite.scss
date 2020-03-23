@@ -1,0 +1,64 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-svg_facebook {
+	@extend %svg-common;
+	background-position: 57.11892797319933% 0;
+}
+
+.svg-svg_facebook-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svg_instagram {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-svg_instagram-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svg_open-menu {
+	@extend %svg-common;
+	background-position: 42.88107202680067% 100%;
+}
+
+.svg-svg_open-menu-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svg_telegram {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-svg_telegram-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svg_viber {
+	@extend %svg-common;
+	background-position: 100% 75.0733137829912%;
+}
+
+.svg-svg_viber-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svg_whatsapp {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-svg_whatsapp-dims {
+	width: 682px;
+	height: 682px;
+}
+

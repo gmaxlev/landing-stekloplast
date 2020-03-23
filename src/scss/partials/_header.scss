@@ -1,0 +1,22 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 126px;
+}
+
+.header__contacts {
+  width: 29.2%;
+  min-width: 340px;
+}

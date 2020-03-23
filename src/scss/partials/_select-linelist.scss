@@ -1,0 +1,25 @@
+.select-linelist {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    margin-right: -20px;
+    justify-content: center;
+  }
+  .button {
+    width: 20%;
+    margin-right: 20px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+      width: auto;
+      min-width: 200px;
+    }
+    &:last-child {
+      margin-right: 0;
+      @include media-breakpoint-down(sm) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

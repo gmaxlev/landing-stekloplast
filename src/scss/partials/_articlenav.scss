@@ -1,0 +1,6 @@
+.articlenav {
+  margin-bottom: 72px;
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}

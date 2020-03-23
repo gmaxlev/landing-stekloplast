@@ -1,0 +1,30 @@
+.services {
+  display: flex;
+  justify-content: space-between;
+
+  display: flex;
+  @include media-breakpoint-down(xs) {
+    flex-wrap: wrap;
+  }
+}
+
+.services__item {
+  width: 33.3333333%;
+  margin-right: 49px;
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    margin-right: 30px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
