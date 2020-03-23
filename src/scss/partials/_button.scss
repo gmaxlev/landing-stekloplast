@@ -96,6 +96,11 @@
   }
 }
 
+.button_d_active {
+  background-color: $color-a;
+  color: $color-b;
+}
+
 .button_e {
   border: 0;
   padding: 0;
@@ -114,16 +119,12 @@
   position: relative;
   transition: background-color 0.5s, color 0.5s;
   box-sizing: border-box;
+  cursor: default;
   @include media-breakpoint-down(xs) {
     padding: 15px;
     padding-left: 60px;
   }
-  &:hover {
-    &::before,
-    &::after {
-      background-color: $color-f;
-    }
-  }
+
   &::before {
     content: "";
     height: 1px;

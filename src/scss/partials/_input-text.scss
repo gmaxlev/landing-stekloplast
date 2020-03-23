@@ -1,0 +1,23 @@
+.input-text {
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+  input {
+    width: 100%;
+    padding: 11px 0 10px 45px;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-weight: 500;
+    border: 0;
+    border-bottom: 1px solid #999999;
+    outline: none;
+    &::placeholder {
+      color: #999999;
+    }
+  }
+  margin-bottom: 10px;
+}

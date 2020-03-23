@@ -2,6 +2,7 @@
   text-align: right;
   position: relative;
   margin-bottom: -35px;
+  z-index: 100;
   @include media-breakpoint-down(xs) {
     margin-bottom: 20px;
     text-align: center;

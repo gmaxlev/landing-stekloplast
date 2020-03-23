@@ -1,32 +1,146 @@
 $(document).ready(function() {
-  new WOW().init();
+  new WOW().init({
+    live: false
+  });
+
+  $("[data-modal]").on("click", function(e) {
+    e.preventDefault();
+    var id = $(this).attr("data-modal");
+    $("#" + id).fadeIn();
+  });
+
+  $(".modal__dark").on("click", function(e) {
+    e.preventDefault();
+    $(this)
+      .parent()
+      .fadeOut();
+  });
+
+  /**
+   * Маска для номера телефона
+   */
+  $(".phone-input").mask("+38 (000) 000 00 00", {
+    placeholder: "+38 (___) ___ __ __"
+  });
+
+  (function() {
+    var animate = false;
+    $(".product-nav button").on("click", function() {
+      var currentIndex;
+      if (animate) return;
+      if (
+        !$(this)
+          .closest(".countries__item")
+          .find(".products-list__item_current").length
+      ) {
+        currentIndex = 0;
+      } else {
+        currentIndex = $(this)
+          .closest(".countries__item")
+          .find(".products-list__item_current")
+          .index();
+      }
+      var newId;
+      if ($(this).is("#product-next")) {
+        newId = currentIndex + 1;
+      } else {
+        newId = currentIndex - 1;
+      }
+      var lengthItems = $(this)
+        .closest(".countries__item")
+        .find(".products-list__item").length;
+      if (newId < 0 || newId > lengthItems - 1) return;
+      console.log(currentIndex);
+      animate = true;
+      $(this)
+        .closest(".countries__item")
+        .find(".products-list__item")
+        .eq(currentIndex)
+        .removeClass("products-list__item_current")
+        .fadeOut(500, function() {
+          $(this)
+            .closest(".countries__item")
+            .find(".products-list__item")
+            .eq(newId)
+            .addClass("products-list__item_current")
+            .fadeIn();
+          animate = false;
+        });
+    });
+  })();
 
   (function() {
     var current = 0;
-    var length = $(".products-list > .products-list__item").length;
-    $("#product-next").on("click", function() {
-      if (current + 1 > length - 1) return;
-      $(".products-list > .products-list__item")
+    var animate = false;
+    var country = 0;
+    $("[data-prodtype]").on("click", function(e) {
+      e.preventDefault();
+      if (animate) return;
+      var index = $(this).index();
+      if (index == current) return;
+      animate = true;
+      $("#allproducts").show();
+      $("html, body").animate(
+        {
+          scrollTop: $("#allproducts").offset().top
+        },
+        2000
+      );
+      $(this)
+        .parent()
+        .find(".button_d_active")
+        .removeClass("button_d_active");
+      $(this).addClass("button_d_active");
+
+      $(".prodlist__item")
         .eq(current)
-        .fadeOut(500, function() {
-          current++;
-          $(".products-list > .products-list__item")
-            .eq(current)
-            .fadeIn(500);
+        .fadeOut(function() {
+          $(".prodlist__item")
+            .eq(index)
+            .fadeIn();
+          current = index;
+          animate = false;
         });
-      console.log(current);
     });
-    $("#product-prev").on("click", function() {
-      if (current - 1 < 0) return;
-      $(".products-list > .products-list__item")
-        .eq(current)
-        .fadeOut(500, function() {
-          current--;
-          $(".products-list > .products-list__item")
-            .eq(current)
-            .fadeIn(500);
-        });
-      console.log(current);
+    $("#countries-list > button").on("click", function(e) {
+      e.preventDefault();
+      if (animate) return;
+      var index = $(this).index();
+      if (index == country) return;
+      $("#allproducts").show();
+      $("html, body").animate(
+        {
+          scrollTop: $("#allproducts").offset().top
+        },
+        2000
+      );
+      $(this)
+        .parent()
+        .find("button")
+        .eq(country)
+        .removeClass("button_b")
+        .addClass("button_c");
+      $(this)
+        .parent()
+        .find("button")
+        .eq(index)
+        .removeClass("button_c")
+        .addClass("button_b");
+      animate = true;
+      $(".prodlist__item").each(function() {
+        var that = this;
+        $(that)
+          .find(".countries__item")
+          .eq(country)
+          .fadeOut(500, function() {
+            $(that)
+              .find(".countries__item")
+              .eq(index)
+              .fadeIn();
+            animate = false;
+          });
+      });
+      country = index;
     });
   })();
 
@@ -64,6 +178,15 @@ $(document).ready(function() {
       }
     });
 
+    new Swiper("#article-images-slider", {
+      loop: true,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: "#article-images-slider-next",
+        prevEl: "#article-images-slider-prev"
+      }
+    });
+
     new Swiper("#slider-types", {
       loop: true,
       spaceBetween: 30,
@@ -77,6 +200,37 @@ $(document).ready(function() {
           slidesPerView: 2
         }
       }
+    });
+  })();
+
+  (function() {
+    $("#article-image-nav > button").on("click", function() {
+      var animate = false;
+      var current = $(".artimage-slides")
+        .find(".artimage-slides__current")
+        .index();
+      var all = $(".artimage-slides").find("img").length;
+      var newId;
+      if ($(this).is("#article-slides-prev")) {
+        newId = current - 1;
+      } else {
+        newId = current + 1;
+      }
+
+      if (newId > all - 1 || newId < 0) return;
+      animate = true;
+      $(".artimage-slides")
+        .find("img")
+        .eq(current)
+        .removeClass("artimage-slides__current")
+        .fadeOut(200, function() {
+          $(".artimage-slides")
+            .find("img")
+            .eq(newId)
+            .addClass("artimage-slides__current")
+            .fadeIn(200);
+          animate = false;
+        });
     });
   })();
 

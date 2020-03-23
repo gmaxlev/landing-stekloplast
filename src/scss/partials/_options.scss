@@ -8,7 +8,7 @@
   @include media-breakpoint-down(lg) {
     flex-wrap: wrap;
   }
-  button {
+  & > span {
     width: calc(20% - 20px);
     margin-right: 20px;
     margin-bottom: 20px;

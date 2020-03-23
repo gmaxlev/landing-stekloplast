@@ -1,0 +1,11 @@
+.artimage-slides {
+  position: relative;
+  z-index: -1;
+  & > img {
+    display: none;
+    max-width: 100%;
+    &:first-child {
+      display: inline-block;
+    }
+  }
+}
