@@ -20,6 +20,7 @@ html(lang="ru")
         script(src="js/jquery.mask.min.js")
         script(src="js/swiper.min.js")
         script(src="js/wow.min.js")
+        script(src="js/jquery.validate.min.js")
 
         // =====================
         // ЗАГРУЗКА SVG СПРАЙТОВ
@@ -46,20 +47,101 @@ html(lang="ru")
 
     body
 
+        // ============================
+        // ФОРМА "РАССЧИТАТЬ СТОИМОСТЬ"
+        // ============================
         .modal#modal-1
             .modal__dark
             .modal__window
                 .win
                     .win__header Заполните форму
                     .win__subheader Мы перезвоним, ответим на все вопросы, поможем с выбором и рассчитаем окончательную стоимость
-                    form.win__form(action="")
+                    form.win__form(action="" name="Рассчитать стоимость").modal-form-simple
                         .input-text
                             img(src="img/icons8-male_user.png", alt="")
-                            input(type="text" name="" placeholder="Ваше имя")
+                            input(type="text" name="name" placeholder="Ваше имя")
                         .input-text
                             img(src="img/icons8-phonelink_ring.png", alt="")
-                            input(type="text" name="" placeholder="Ваше имя").phone-input
+                            input(type="text" name="phone" placeholder="Ваше имя").phone-input
                         button(type="submit").button.button_a Рассчитать стоимость
+                    .formcomplete.formcomplete_ok
+                        div 
+                            img(src="img/support.svg", alt="")
+                            <span>Спасибо!</span><br>
+                            | Мы вам перезвоним.
+                    .formcomplete.formcomplete_error Не удалось отправить.
+        
+        // ============================
+        // ФОРМА "ПОДОБРАТЬ ПРОФИЛЬ"
+        // ============================
+        .modal#modal-2
+            .modal__dark
+            .modal__window
+                .win
+                    .win__header Заполните форму
+                    .win__subheader Мы перезвоним, ответим на все вопросы, поможем с выбором и рассчитаем окончательную стоимость
+                    form.win__form(action="" name="Подобрать профиль").modal-form-simple
+                        .input-text
+                            img(src="img/icons8-male_user.png", alt="")
+                            input(type="text" name="name" placeholder="Ваше имя")
+                        .input-text
+                            img(src="img/icons8-phonelink_ring.png", alt="")
+                            input(type="text" name="phone" placeholder="Ваше имя").phone-input
+                        button(type="submit").button.button_a Рассчитать стоимость
+                    .formcomplete.formcomplete_ok
+                        div 
+                            img(src="img/support.svg", alt="")
+                            <span>Спасибо!</span><br>
+                            | Мы вам перезвоним.
+                    .formcomplete.formcomplete_error Не удалось отправить.
+        
+        // ============================
+        // ФОРМА "ОФОРМИТЬ РАССРОЧКУ"
+        // ============================
+        .modal#modal-3
+            .modal__dark
+            .modal__window
+                .win
+                    .win__header Заполните форму
+                    .win__subheader Мы перезвоним, ответим на все вопросы, поможем с выбором и рассчитаем окончательную стоимость
+                    form.win__form(action="" name="Оформить рассрочку").modal-form-simple
+                        .input-text
+                            img(src="img/icons8-male_user.png", alt="")
+                            input(type="text" name="name" placeholder="Ваше имя")
+                        .input-text
+                            img(src="img/icons8-phonelink_ring.png", alt="")
+                            input(type="text" name="phone" placeholder="Ваше имя").phone-input
+                        button(type="submit").button.button_a Рассчитать стоимость
+                    .formcomplete.formcomplete_ok
+                        div 
+                            img(src="img/support.svg", alt="")
+                            <span>Спасибо!</span><br>
+                            | Мы вам перезвоним.
+                    .formcomplete.formcomplete_error Не удалось отправить.
+        
+        // ============================
+        // ФОРМА "ЗАКАЗАТЬ УСЛУГУ"
+        // ============================
+        .modal#modal-4
+            .modal__dark
+            .modal__window
+                .win
+                    .win__header Заполните форму
+                    .win__subheader Мы перезвоним, ответим на все вопросы, поможем с выбором и рассчитаем окончательную стоимость
+                    form.win__form(action="" name="Заказать услугу").modal-form-simple
+                        .input-text
+                            img(src="img/icons8-male_user.png", alt="")
+                            input(type="text" name="name" placeholder="Ваше имя")
+                        .input-text
+                            img(src="img/icons8-phonelink_ring.png", alt="")
+                            input(type="text" name="phone" placeholder="Ваше имя").phone-input
+                        button(type="submit").button.button_a Рассчитать стоимость
+                    .formcomplete.formcomplete_ok
+                        div 
+                            img(src="img/support.svg", alt="")
+                            <span>Спасибо!</span><br>
+                            | Мы вам перезвоним.
+                    .formcomplete.formcomplete_error Не удалось отправить.
 
         // ============
         // КНОПКА ВВЕРХ
@@ -293,7 +375,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -386,7 +468,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -479,7 +561,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -572,7 +654,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                             
@@ -678,7 +760,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -771,7 +853,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -864,7 +946,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -957,7 +1039,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                     
@@ -1068,7 +1150,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -1161,7 +1243,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -1254,7 +1336,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -1347,7 +1429,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                             
@@ -1453,7 +1535,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -1546,7 +1628,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -1639,7 +1721,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -1732,7 +1814,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                     
@@ -1844,7 +1926,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -1937,7 +2019,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -2030,7 +2112,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -2123,7 +2205,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                             
@@ -2229,7 +2311,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -2322,7 +2404,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -2415,7 +2497,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -2508,7 +2590,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                     
@@ -2620,7 +2702,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -2713,7 +2795,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -2806,7 +2888,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -2899,7 +2981,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                             
@@ -3005,7 +3087,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -3098,7 +3180,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -3191,7 +3273,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -3284,7 +3366,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                     
@@ -3395,7 +3477,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -3488,7 +3570,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -3581,7 +3663,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -3674,7 +3756,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                             
@@ -3780,7 +3862,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact.wow.fadeIn(data-wow-delay="1s")
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -3873,7 +3955,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -3966,7 +4048,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
                                         .products-list__item
@@ -4059,7 +4141,7 @@ html(lang="ru")
                                                     img(src="img/options/icons8_closed_window_30px.png", alt="")
                                                     span Идеальный подоконник
                                             .toact
-                                                button.button.button_f Рассчитать стоимость
+                                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                                             .decor.decor_1
                                                 img(src="img/measure_tape_PNG32.png", alt="")
             
@@ -4084,7 +4166,7 @@ html(lang="ru")
                                 li.listcheck__item.wow.fadeInUp(data-wow-delay="0.4s") Вычислим нагрузку и проведем подбор по прочности
                                 li.listcheck__item.wow.fadeInUp(data-wow-delay="0.5s") Учтем требования по шумоизоляции и особенности эксплуатации
                             .article-act.wow.fadeInUp(data-wow-delay="1s")
-                                button.button.button_f Подобрать профиль
+                                button.button.button_f(data-modal="modal-2") Подобрать профиль
                         .article__image.wow.fadeInRight(data-wow-delay="0.2s")
                             .article-image
                                 .article-image__img
@@ -4110,7 +4192,7 @@ html(lang="ru")
                                 li.listcheck__item.wow.fadeInUp(data-wow-delay="0.4s") Без поручителей
                             .article-comment.wow.fadeInUp(data-wow-delay="0.5s") Какой смысл экономить, если вы ставите окна на 50 лет, верно?
                             .article-act.wow.fadeInUp(data-wow-delay="1s")
-                                button.button.button_f Подобрать профиль
+                                button.button.button_f(data-modal="modal-2") Подобрать профиль
                         .article__image.article__image_rev.fadeInLeft(data-wow-delay="0.2s")
                             .article-image.article-image_rev
                                 .article-image__img
@@ -4374,7 +4456,7 @@ html(lang="ru")
                                                 img(src="img/20af468487e1e16a644de45a5f1263de.png", alt="")
                                             .service__name Монтаж по ДСТУ
                                         .service__act
-                                            button.button.button_f Заказать
+                                            button.button.button_f(data-modal="modal-4") Заказать
                                 .services__item
                                     .service.wow.fadeInLeft(data-wow-delay="0.3s")
                                         .service__content
@@ -4385,7 +4467,7 @@ html(lang="ru")
                                                 img(src="img/507.png", alt="")
                                             .service__name Установка откосов
                                         .service__act
-                                            button.button.button_f Заказать
+                                            button.button.button_f(data-modal="modal-4") Заказать
                                 .services__item
                                     .service.wow.fadeInLeft(data-wow-delay="0.4s")
                                         .service__content
@@ -4396,7 +4478,7 @@ html(lang="ru")
                                                 img(src="img/1514926121_remontokon.png", alt="")
                                             .service__name Ремонт и регулировка окон
                                         .service__act
-                                            button.button.button_f Заказать
+                                            button.button.button_f(data-modal="modal-4") Заказать
                         .serv__man
                             img(src="img/unnamed4.png", alt="" data-wow-delay="0.2s").wow.fadeInUp
                             .decor.decor_4
@@ -4416,7 +4498,7 @@ html(lang="ru")
                             .promo__header.wow.jackInTheBox Акция!
                             .promo__text.wow.jackInTheBox Только <b>до 30 марта</b> акция: <br>5-камерный профиль по цене 3-камерного!
                             .promo__act.wow.jackInTheBox
-                                button.button.button_f Рассчитать стоимость
+                                button.button.button_f(data-modal="modal-1") Рассчитать стоимость
                         .promo__img
                             img(src="img/profile.png", alt="").wow.fadeInRight
             

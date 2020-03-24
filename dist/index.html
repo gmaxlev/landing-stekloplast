@@ -12,7 +12,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="js/wow.min.js"></script><!-- =====================-->
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script><!-- =====================-->
     <!-- ЗАГРУЗКА SVG СПРАЙТОВ-->
     <!-- =====================-->
     <script>
@@ -38,16 +39,80 @@
 </head>
 
 <body>
+    <!-- ============================-->
+    <!-- ФОРМА "РАССЧИТАТЬ СТОИМОСТЬ"-->
+    <!-- ============================-->
     <div class="modal" id="modal-1">
         <div class="modal__dark"></div>
         <div class="modal__window">
             <div class="win">
                 <div class="win__header">Заполните форму</div>
                 <div class="win__subheader">Мы перезвоним, ответим на все вопросы, поможем с выбором и рассчитаем окончательную стоимость</div>
-                <form class="win__form" action="">
-                    <div class="input-text"><img src="img/icons8-male_user.png" alt="" /><input type="text" name="" placeholder="Ваше имя" /></div>
-                    <div class="input-text"><img src="img/icons8-phonelink_ring.png" alt="" /><input class="phone-input" type="text" name="" placeholder="Ваше имя" /></div><button class="button button_a" type="submit">Рассчитать стоимость</button>
+                <form class="win__form modal-form-simple" action="" name="Рассчитать стоимость">
+                    <div class="input-text"><img src="img/icons8-male_user.png" alt="" /><input type="text" name="name" placeholder="Ваше имя" /></div>
+                    <div class="input-text"><img src="img/icons8-phonelink_ring.png" alt="" /><input class="phone-input" type="text" name="phone" placeholder="Ваше имя" /></div><button class="button button_a" type="submit">Рассчитать стоимость</button>
                 </form>
+                <div class="formcomplete formcomplete_ok">
+                    <div> <img src="img/support.svg" alt="" /><span>Спасибо!</span><br>Мы вам перезвоним.</div>
+                </div>
+                <div class="formcomplete formcomplete_error">Не удалось отправить.</div>
+            </div>
+        </div>
+    </div><!-- ============================-->
+    <!-- ФОРМА "ПОДОБРАТЬ ПРОФИЛЬ"-->
+    <!-- ============================-->
+    <div class="modal" id="modal-2">
+        <div class="modal__dark"></div>
+        <div class="modal__window">
+            <div class="win">
+                <div class="win__header">Заполните форму</div>
+                <div class="win__subheader">Мы перезвоним, ответим на все вопросы, поможем с выбором и рассчитаем окончательную стоимость</div>
+                <form class="win__form modal-form-simple" action="" name="Подобрать профиль">
+                    <div class="input-text"><img src="img/icons8-male_user.png" alt="" /><input type="text" name="name" placeholder="Ваше имя" /></div>
+                    <div class="input-text"><img src="img/icons8-phonelink_ring.png" alt="" /><input class="phone-input" type="text" name="phone" placeholder="Ваше имя" /></div><button class="button button_a" type="submit">Рассчитать стоимость</button>
+                </form>
+                <div class="formcomplete formcomplete_ok">
+                    <div> <img src="img/support.svg" alt="" /><span>Спасибо!</span><br>Мы вам перезвоним.</div>
+                </div>
+                <div class="formcomplete formcomplete_error">Не удалось отправить.</div>
+            </div>
+        </div>
+    </div><!-- ============================-->
+    <!-- ФОРМА "ОФОРМИТЬ РАССРОЧКУ"-->
+    <!-- ============================-->
+    <div class="modal" id="modal-3">
+        <div class="modal__dark"></div>
+        <div class="modal__window">
+            <div class="win">
+                <div class="win__header">Заполните форму</div>
+                <div class="win__subheader">Мы перезвоним, ответим на все вопросы, поможем с выбором и рассчитаем окончательную стоимость</div>
+                <form class="win__form modal-form-simple" action="" name="Оформить рассрочку">
+                    <div class="input-text"><img src="img/icons8-male_user.png" alt="" /><input type="text" name="name" placeholder="Ваше имя" /></div>
+                    <div class="input-text"><img src="img/icons8-phonelink_ring.png" alt="" /><input class="phone-input" type="text" name="phone" placeholder="Ваше имя" /></div><button class="button button_a" type="submit">Рассчитать стоимость</button>
+                </form>
+                <div class="formcomplete formcomplete_ok">
+                    <div> <img src="img/support.svg" alt="" /><span>Спасибо!</span><br>Мы вам перезвоним.</div>
+                </div>
+                <div class="formcomplete formcomplete_error">Не удалось отправить.</div>
+            </div>
+        </div>
+    </div><!-- ============================-->
+    <!-- ФОРМА "ЗАКАЗАТЬ УСЛУГУ"-->
+    <!-- ============================-->
+    <div class="modal" id="modal-4">
+        <div class="modal__dark"></div>
+        <div class="modal__window">
+            <div class="win">
+                <div class="win__header">Заполните форму</div>
+                <div class="win__subheader">Мы перезвоним, ответим на все вопросы, поможем с выбором и рассчитаем окончательную стоимость</div>
+                <form class="win__form modal-form-simple" action="" name="Заказать услугу">
+                    <div class="input-text"><img src="img/icons8-male_user.png" alt="" /><input type="text" name="name" placeholder="Ваше имя" /></div>
+                    <div class="input-text"><img src="img/icons8-phonelink_ring.png" alt="" /><input class="phone-input" type="text" name="phone" placeholder="Ваше имя" /></div><button class="button button_a" type="submit">Рассчитать стоимость</button>
+                </form>
+                <div class="formcomplete formcomplete_ok">
+                    <div> <img src="img/support.svg" alt="" /><span>Спасибо!</span><br>Мы вам перезвоним.</div>
+                </div>
+                <div class="formcomplete formcomplete_error">Не удалось отправить.</div>
             </div>
         </div>
     </div><!-- ============-->
@@ -223,7 +288,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -300,7 +365,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -377,7 +442,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -454,7 +519,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -543,7 +608,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -620,7 +685,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -697,7 +762,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -774,7 +839,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -870,7 +935,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -947,7 +1012,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1024,7 +1089,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1101,7 +1166,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -1190,7 +1255,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1267,7 +1332,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1344,7 +1409,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1421,7 +1486,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -1517,7 +1582,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1594,7 +1659,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1671,7 +1736,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1748,7 +1813,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -1837,7 +1902,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1914,7 +1979,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -1991,7 +2056,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2068,7 +2133,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -2164,7 +2229,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2241,7 +2306,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2318,7 +2383,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2395,7 +2460,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -2484,7 +2549,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2561,7 +2626,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2638,7 +2703,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2715,7 +2780,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -2811,7 +2876,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2888,7 +2953,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -2965,7 +3030,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -3042,7 +3107,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -3131,7 +3196,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e wow zoomIn" data-wow-delay="0.2"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.3s"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.4s"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.5s"><img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.6s"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.7s"><img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e wow zoomIn" data-wow-delay="0.8s"><img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="0.9s"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig wow zoomIn" data-wow-delay="1s"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact wow fadeIn" data-wow-delay="1s"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -3208,7 +3273,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -3285,7 +3350,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                     <div class="products-list__item">
@@ -3362,7 +3427,7 @@
                                         <div class="options">
                                             <div class="decor decor_14"><img src="img/lines/lines8.png" alt="" /></div><span class="button button_e"><img src="img/options/icons8_snow_40px.png" alt="" /><span>Теплая <br>зима</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_snowflake_40px.png" alt="" /><span>Защита от <br>промерзания</span></span><span class="button button_e"><img src="img/options/icons8_partly_cloudy_day_40px.png" alt="" /><span>Прохладное лето</span></span><span class="button button_e"> <img src="img/options/icons8_rain_cloud_40px.png" alt="" /><span>Тихий дождь</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_dry_30px.png" alt="" /><span>Пошаговое проветривание</span></span><span class="button button_e"> <img src="img/options/icons8_open_window_40px.png" alt="" /><span>Фиксация створки</span></span><span class="button button_e"> <img src="img/options/icons8_baby_40px.png" alt="" /><span>Baby <br>control</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_wind_40px.png" alt="" /><span>Устройчивость к ветру</span></span><span class="button button_e button_ebig"><img src="img/options/icons8_closed_window_30px.png" alt="" /><span>Идеальный подоконник</span></span>
                                         </div>
-                                        <div class="toact"><button class="button button_f">Рассчитать стоимость</button></div>
+                                        <div class="toact"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
                                     </div>
                                 </div>
@@ -3388,7 +3453,7 @@
                             <li class="listcheck__item wow fadeInUp" data-wow-delay="0.4s">Вычислим нагрузку и проведем подбор по прочности</li>
                             <li class="listcheck__item wow fadeInUp" data-wow-delay="0.5s">Учтем требования по шумоизоляции и особенности эксплуатации</li>
                         </ul>
-                        <div class="article-act wow fadeInUp" data-wow-delay="1s"><button class="button button_f">Подобрать профиль</button></div>
+                        <div class="article-act wow fadeInUp" data-wow-delay="1s"><button class="button button_f" data-modal="modal-2">Подобрать профиль</button></div>
                     </div>
                     <div class="article__image wow fadeInRight" data-wow-delay="0.2s">
                         <div class="article-image">
@@ -3415,7 +3480,7 @@
                             <li class="listcheck__item wow fadeInUp" data-wow-delay="0.4s">Без поручителей</li>
                         </ul>
                         <div class="article-comment wow fadeInUp" data-wow-delay="0.5s">Какой смысл экономить, если вы ставите окна на 50 лет, верно?</div>
-                        <div class="article-act wow fadeInUp" data-wow-delay="1s"><button class="button button_f">Подобрать профиль</button></div>
+                        <div class="article-act wow fadeInUp" data-wow-delay="1s"><button class="button button_f" data-modal="modal-2">Подобрать профиль</button></div>
                     </div>
                     <div class="article__image article__image_rev fadeInLeft" data-wow-delay="0.2s">
                         <div class="article-image article-image_rev">
@@ -3697,7 +3762,7 @@
                                         </div>
                                         <div class="service__name">Монтаж по ДСТУ</div>
                                     </div>
-                                    <div class="service__act"><button class="button button_f">Заказать</button></div>
+                                    <div class="service__act"><button class="button button_f" data-modal="modal-4">Заказать</button></div>
                                 </div>
                             </div>
                             <div class="services__item">
@@ -3708,7 +3773,7 @@
                                         </div>
                                         <div class="service__name">Установка откосов</div>
                                     </div>
-                                    <div class="service__act"><button class="button button_f">Заказать</button></div>
+                                    <div class="service__act"><button class="button button_f" data-modal="modal-4">Заказать</button></div>
                                 </div>
                             </div>
                             <div class="services__item">
@@ -3719,7 +3784,7 @@
                                         </div>
                                         <div class="service__name">Ремонт и регулировка окон</div>
                                     </div>
-                                    <div class="service__act"><button class="button button_f">Заказать</button></div>
+                                    <div class="service__act"><button class="button button_f" data-modal="modal-4">Заказать</button></div>
                                 </div>
                             </div>
                         </div>
@@ -3740,7 +3805,7 @@
                     <div class="promo__content">
                         <div class="promo__header wow jackInTheBox">Акция!</div>
                         <div class="promo__text wow jackInTheBox">Только <b>до 30 марта</b> акция: <br>5-камерный профиль по цене 3-камерного!</div>
-                        <div class="promo__act wow jackInTheBox"><button class="button button_f">Рассчитать стоимость</button></div>
+                        <div class="promo__act wow jackInTheBox"><button class="button button_f" data-modal="modal-1">Рассчитать стоимость</button></div>
                     </div>
                     <div class="promo__img"><img class="wow fadeInRight" src="img/profile.png" alt="" /></div>
                 </div>

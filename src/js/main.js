@@ -258,4 +258,105 @@ $(document).ready(function() {
       );
     });
   })();
+
+  /* 
+  Обработчик ошибок
+*/
+  function showError(error, element) {
+    if (
+      $(element)
+        .parent()
+        .find(".valerror").length !== 0
+    )
+      return false;
+    if ($(element).attr("name") == "name") {
+      message = "Введите имя";
+    } else if ($(element).attr("name") == "phone") {
+      message = "Введите номер телефона";
+    }
+    $(element)
+      .parent()
+      .prepend("<div class='valerror'>" + message + "</div>");
+    return true;
+  }
+
+  (function() {
+    /* 
+      Окно "Подобрать тур"
+    */
+
+    $(".modal-form-simple").each(function() {
+      $(this)
+        .submit(function(e) {
+          e.preventDefault();
+        })
+        .validate({
+          rules: {
+            name: {
+              required: {
+                depends: function() {
+                  $(this).val($.trim($(this).val()));
+                  return true;
+                }
+              }
+            },
+            phone: {
+              required: {
+                depends: function() {
+                  $(this).val($.trim($(this).val()));
+                  return true;
+                }
+              },
+              minlength: 10
+            }
+          },
+
+          success: function(label, element) {
+            $(element)
+              .parent()
+              .find(".valerror")
+              .remove();
+            return true;
+          },
+          errorPlacement: showError,
+          submitHandler: function(form) {
+            $.ajax({
+              url: "send.php",
+              type: "POST",
+              data: {
+                form: $(form).attr("name"),
+                name: $(form)
+                  .find('input[name ="name"]')
+                  .val(),
+                phone: $(form)
+                  .find('input[name ="phone"]')
+                  .val()
+              },
+              success: function() {
+                $(form)
+                  .siblings(".formcomplete_ok")
+                  .slideDown(500);
+                $(form)
+                  .find(".input-text, .textarea")
+                  .prop("disabled", true)
+                  .val("");
+                $(form)
+                  .find(".button")
+                  .prop("disabled", true);
+                setTimeout(function() {
+                  $(form)
+                    .closest(".modal")
+                    .fadeOut();
+                }, 4000);
+              },
+              error: function() {
+                $(form)
+                  .siblings(".formcomplete_error")
+                  .slideDown(500);
+              }
+            });
+          }
+        });
+    });
+  })();
 });

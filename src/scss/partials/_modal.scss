@@ -26,6 +26,9 @@
   margin-top: 100px;
   position: relative;
   z-index: 2200;
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
   @include media-breakpoint-down(sm) {
     margin-top: 50px;
   }
