@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Promo Solution. Сувенирное агентство</title><!-- ===============-->
+    <!-- СТИЛИ И СКРИПТЫ-->
+    <!-- ===============-->
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/wow.min.js"></script><!-- =====================-->
+    <!-- ЗАГРУЗКА SVG СПРАЙТОВ-->
+    <!-- =====================-->
+    <script>
+        $(document).ready(function() {
+
+            var req = new XMLHttpRequest();
+
+            req.onload = function(e) {
+                var svg = document.implementation.createHTMLDocument('');
+                svg.body.innerHTML = e.target.response.replace('<svg ', '<svg style="display: none"');
+                document.body.appendChild(svg.body.firstElementChild);
+                svg = null;
+            };
+
+            req.open('GET', './img/sprite.defs.svg', true);
+
+            req.responseType = 'text';
+
+            req.send();
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- ==============-->
+    <!-- МОБИЛЬНОЕ МЕНЮ-->
+    <!-- ==============-->
+    <div class="mobmenu">
+        <ul class="mobmenu__list">
+            <li class="mobmenu__item"><a href="" data-scrollto="section-about-us">О нас</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="section-edge">Преимущества</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="section-services">Услуги</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="section-clients">Клиенты</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="section-team">Команда</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="section-mission">Миссия</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="section-footer">Контакты</a></li>
+        </ul>
+        <div class="mobmenu__langs"><a class="mobmenu__langs_current" href="">UKR</a><a href="">RUS</a><a href="">ENG</a></div>
+    </div><!-- ================-->
+    <!-- АДАПТИВНАЯ ШАПКА-->
+    <!-- ================-->
+    <div class="mobheader">
+        <div class="mobheader__logo"><img class="header__logo-white" src="img/logo-white.png" alt="" /><img class="header__logo-black" src="img/logo.png" alt="" /></div>
+        <div class="mobheader__menu"><svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#menu"></use>
+            </svg></div>
+    </div>
+    <div class="wrapper">
+        <!-- ======-->
+        <!-- HEADER-->
+        <!-- ======-->
+        <header class="header">
+            <div class="big-container header__content">
+                <div class="header__logo"><img class="header__logo-black" src="img/logo.png" alt="" /><img class="header__logo-white" src="img/logo-white.png" alt="" /></div>
+                <nav class="header__nav">
+                    <ul class="nav">
+                        <li class="nav__item"><a href="" data-scrollto="section-about-us">О нас</a></li>
+                        <li class="nav__item"><a href="" data-scrollto="section-edge">Преимущества</a></li>
+                        <li class="nav__item"><a href="" data-scrollto="section-services">Услуги</a></li>
+                        <li class="nav__item"><a href="" data-scrollto="section-clients">Клиенты</a></li>
+                        <li class="nav__item"><a href="" data-scrollto="section-team">Команда</a></li>
+                        <li class="nav__item"><a href="" data-scrollto="section-mission">Миссия</a></li>
+                        <li class="nav__item"><a href="" data-scrollto="section-footer">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__langs">
+                    <div class="dropdown">
+                        <div class="dropdown__header"><span>UKR</span><svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg></div>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item"><a href="">RUS</a></li>
+                            <li class="dropdown__item"><a href="">ENG</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header><!-- ===========-->
+        <!-- ПРИВЕТСТВИЕ-->
+        <!-- ===========-->
+        <section class="intro">
+            <div class="intro-slider">
+                <div class="swiper-container" id="intro-slider">
+                    <!-- Additional required wrapper-->
+                    <div class="swiper-wrapper">
+                        <!-- Slides-->
+                        <div class="swiper-slide">
+                            <div class="intro-slider__item">
+                                <div class="intro-slider__bg intro-slider__bg_mobile" style="background-image: url(img/asino_mobile.png)"></div>
+                                <div class="intro-slider__bg intro-slider__bg_desktop">
+                                    <div class="intro__left"><img class="wow rotateInUpRight" src="img/intro/1.png" alt="" data-wow-delay="0.1s" /><img class="wow rollIn" src="img/intro/2.png" alt="" data-wow-delay="0.3s" /><img class="wow fadeInLeft" src="img/intro/3.png" alt="" data-wow-delay="0.5s" /><img class="wow rotateInDownRight" src="img/intro/4.png" alt="" data-wow-delay="0.7s" /><img class="wow rotateInDownRight" src="img/intro/5.png" alt="" data-wow-delay="0.7s" /></div>
+                                    <div class="intro__right"><img class="wow rotateInDownLeft" src="img/intro/6.png" alt="" data-wow-delay="0.1s" /><img class="wow rotateInDownRight" src="img/intro/7.png" alt="" data-wow-delay="0.3s" /><img class="wow bounceInDown" src="img/intro/8.png" alt="" data-wow-delay="0.5s" /><img class="wow rotateInUpLeft" src="img/intro/9.png" alt="" data-wow-delay="0.7s" /></div>
+                                </div>
+                                <div class="intro__content">
+                                    <div class="intro__img"><img src="img/logo-big.png" alt="" /></div>
+                                    <div class="intro__header"><img src="img/about-us.svg" alt="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="intro-slider__item">
+                                <div class="intro-slider__bg intro-slider__bg_desktop" style="background-image: url(img/unifarm.png)"></div>
+                                <div class="intro-slider__bg intro-slider__bg_mobile" style="background-image: url(img/unifarm_mobile.png)"></div>
+                                <div class="intro__content">
+                                    <div class="intro__img"><img src="img/logo-big.png" alt="" /></div>
+                                    <div class="intro__header"><img src="img/about-us.svg" alt="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="intro-slider__item">
+                                <div class="intro-slider__bg intro-slider__bg_desktop" style="background-image: url(img/ksantis.png)"></div>
+                                <div class="intro-slider__bg intro-slider__bg_mobile" style="background-image: url(img/ksantis_mobile.png)"></div>
+                                <div class="intro__content">
+                                    <div class="intro__img"><img src="img/logo-big.png" alt="" /></div>
+                                    <div class="intro__header"><img src="img/about-us.svg" alt="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="intro-slider__item">
+                                <div class="intro-slider__bg intro-slider__bg_desktop" style="background-image: url(img/takeda.png)"></div>
+                                <div class="intro-slider__bg intro-slider__bg_mobile" style="background-image: url(img/takeda_mobile.png)"></div>
+                                <div class="intro__content">
+                                    <div class="intro__img"><img src="img/logo-big.png" alt="" /></div>
+                                    <div class="intro__header"><img src="img/about-us.svg" alt="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="intro-slider__item">
+                                <div class="intro-slider__bg intro-slider__bg_desktop" style="background-image: url(img/biotehnos.png)"></div>
+                                <div class="intro-slider__bg intro-slider__bg_mobile" style="background-image: url(img/biotehnos_mobile.png)"></div>
+                                <div class="intro__content">
+                                    <div class="intro__img"><img src="img/logo-big.png" alt="" /></div>
+                                    <div class="intro__header"><img src="img/about-us.svg" alt="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- If we need pagination-->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section><!-- =====-->
+        <!-- О НАС-->
+        <!-- =====-->
+        <div class="container" id="section-about-us">
+            <section class="section">
+                <h2 class="section-header wow fadeInUp"><span>О</span> нас</h2>
+                <div class="section-subheader wow fadeInUp" data-wow-delay="0.3s">Мы — команда профессионалов с многолетним опытом в разработке дизайна, создании креативной сувенирной и полиграфической продукции. <br>Наша задача — воплотить самые нестандартные идеи в рекламный продукт, обеспечив эстетическую красоту, высокое качество и первоклассный сервис работы</div>
+                <div class="exce">
+                    <div class="exce__item">
+                        <div class="exce__header"> <span class="wow fadeIn" data-wow-delay="0.5s">8</span>
+                            <div class="exce__circle" data-wow-delay="0.5s"></div>
+                        </div>
+                        <div class="exce__name wow fadeInUp" data-wow-delay="0.5s">лет <br>на рынке</div>
+                    </div>
+                    <div class="exce__item">
+                        <div class="exce__header"> <span class="wow fadeIn" data-wow-delay="1s">25</span>
+                            <div class="exce__circle" data-wow-delay="1s"></div>
+                        </div>
+                        <div class="exce__name wow fadeInUp" data-wow-delay="1s">отечественных <br>и зарубежных партнеров</div>
+                    </div>
+                    <div class="exce__item">
+                        <div class="exce__header"> <span class="wow fadeIn" data-wow-delay="1.5s">1000</span>
+                            <div class="exce__circle" data-wow-delay="1.5s"></div>
+                        </div>
+                        <div class="exce__name wow fadeInUp" data-wow-delay="1.5s">успешных <br>проектов</div>
+                    </div>
+                    <div class="exce__item">
+                        <div class="exce__header"> <span class="wow fadeIn" data-wow-delay="2s">100%</span>
+                            <div class="exce__circle" data-wow-delay="2s"></div>
+                        </div>
+                        <div class="exce__name wow fadeInUp" data-wow-delay="2s">довольных <br>клиентов</div>
+                    </div>
+                </div>
+            </section>
+        </div><!-- ===========-->
+        <!-- НАША МИССИЯ-->
+        <!-- ===========-->
+        <section class="section section_accent" id="section-mission">
+            <div class="container">
+                <h2 class="section-header wow fadeInUp"><span>Наша</span> миссия</h2>
+                <div class="mission">
+                    <p class="wow fadeInUp" data-wow-delay="0.3s">В эпоху, когда миром правят информация и деньги, мы создаем новое пространство для бизнеса, собирая в команду людей, готовых развивать свои таланты, творить, расти профессионально <br>и благодаря своей уникальности достигать финансового успеха</p>
+                    <p class="wow fadeInUp" data-wow-delay="0.5s">Наша миссия — нести красоту и радость людям, <br>вкладывая позитивную энергию в создаваемый нами продукт! </p>
+                </div>
+            </div>
+        </section><!-- =================-->
+        <!-- НАШИ ПРЕИМУЩЕСТВА-->
+        <!-- =================-->
+        <div class="container" id="section-edge">
+            <section class="section">
+                <h2 class="section-header wow fadeInUp"><span>Наши</span> преимущества</h2>
+                <div class="edge">
+                    <div class="edge__item wow fadeInLeft" data-wow-delay="0s">
+                        <div class="edge__num">1</div>
+                        <div class="edge__name wow fadeInUp" data-wow-delay="0s">Креативная</div>
+                        <div class="edge__about wow fadeInUp" data-wow-delay="0.2s">команда</div>
+                    </div>
+                    <div class="edge__item wow fadeInLeft" data-wow-delay="0.7s">
+                        <div class="edge__num">2</div>
+                        <div class="edge__name wow fadeInUp" data-wow-delay="0.7s">Огромный опыт</div>
+                        <div class="edge__about wow fadeInUp" data-wow-delay="0.9s">рекламных проектов <br>«под ключ»</div>
+                    </div>
+                    <div class="edge__item wow fadeInLeft" data-wow-delay="1.4s">
+                        <div class="edge__num">3</div>
+                        <div class="edge__name wow fadeInUp" data-wow-delay="1.4s">Высокое качество</div>
+                        <div class="edge__about wow fadeInUp" data-wow-delay="1.6s">продукции <br>и клиентского сервиса</div>
+                    </div>
+                </div>
+            </section>
+        </div><!-- ===========-->
+        <!-- НАШИ УСЛУГИ-->
+        <!-- ===========-->
+        <section class="section section_accent" id="section-services">
+            <div class="container">
+                <h2 class="section-header wow fadeInUp"><span>Наши</span> услуги</h2>
+                <div class="services"><a class="services__item wow fadeInUp" href="img/graphic/01.jpg" data-fancybox="gallery-1" style="background-image: url(img/services/1.png)" data-wow-delay="0s">
+                        <div class="services__content">
+                            <div class="services__header">
+                                <div class="services__img"><img src="img/icons8_design_90px.png" alt="" /></div>
+                                <div class="services__name">Graphic Design</div>
+                            </div>
+                            <div class="services__about">Разработка идеи <br>и создание <br>графического <br>визуального дизайна</div>
+                        </div>
+                    </a><a class="services__item wow fadeInUp" href="img/printing/01.jpg" data-caption="Описание изображения" data-fancybox="gallery-2" style="background-image: url(img/services/2.png)" data-wow-delay="0.2s">
+                        <div class="services__content">
+                            <div class="services__header">
+                                <div class="services__img"><img src="img/icons8_print_90px.png" alt="" /></div>
+                                <div class="services__name">Printing</div>
+                            </div>
+                            <div class="services__about">Разработка дизайна <br>и печать <br>полиграфической <br>продукции</div>
+                        </div>
+                    </a><a class="services__item wow fadeInUp" href="img/gifts/01.jpg" data-fancybox="gallery-3" style="background-image: url(img/services/3.png)" data-wow-delay="0.4s">
+                        <div class="services__content">
+                            <div class="services__header">
+                                <div class="services__img"><img src="img/icons8_espresso_cup_90px.png" alt="" /></div>
+                                <div class="services__name">Gifts</div>
+                            </div>
+                            <div class="services__about">Разработка <br>и производство <br>сувенирной <br>продукции</div>
+                        </div>
+                    </a><a class="services__item wow fadeInUp" href="img/image1-825x460.jpg" data-caption="Описание изображения" data-fancybox="gallery-4" style="background-image: url(img/services/4.png)" data-wow-delay="0.6s">
+                        <div class="services__content">
+                            <div class="services__header">
+                                <div class="services__img"><img src="img/icons8_video_playlist_90px.png" alt="" /></div>
+                                <div class="services__name">Video Production </div>
+                            </div>
+                            <div class="services__about">Разработка сценария <br>и создание <br>профессионального <br>рекламного видео </div>
+                        </div>
+                    </a></div>
+                <div class="services__gallery">
+                    <a href="img/graphic/04.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/02.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/03.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/05.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/06.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/07.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/08.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/09.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/010.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/011.jpg" data-fancybox="gallery-1"></a><a href="img/graphic/012.jpg" data-fancybox="gallery-1"></a>
+                </div>
+                <div class="services__gallery">
+                    <a href="img/printing/02.jpg" data-fancybox="gallery-2"></a><a href="img/printing/03.jpg" data-fancybox="gallery-2">  <a href="img/printing/04.jpg" data-fancybox="gallery-2"></a><a href="img/printing/05.jpg" data-fancybox="gallery-2">  <a href="img/printing/06.jpg" data-fancybox="gallery-2"></a><a href="img/printing/07.jpg" data-fancybox="gallery-2">  <a href="img/printing/08.jpg" data-fancybox="gallery-2"></a><a href="img/printing/09.jpg" data-fancybox="gallery-2">  <a href="img/printing/010.jpg" data-fancybox="gallery-2"></a><a href="img/printing/011.jpg" data-fancybox="gallery-2">  <a href="img/printing/012.jpg" data-fancybox="gallery-2"></a>
+                </div>
+                <div class="services__gallery">
+                    <a href="img/gifts/02.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/03.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/04.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/05.jpg" data-fancybox="gallery-3"></a><a href="img/gifts/06.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/07.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/08.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/09.jpg" data-fancybox="gallery-3"></a><a href="img/gifts/010.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/011.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/012.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/013.jpg" data-fancybox="gallery-3"></a><a href="img/gifts/014.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/02.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/02.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/015.jpg" data-fancybox="gallery-3"></a><a href="img/gifts/016.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/017.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/018.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/019.jpg" data-fancybox="gallery-3"></a><a href="img/gifts/020.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/021.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/022.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/023.jpg" data-fancybox="gallery-3"></a><a href="img/gifts/024.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/025.jpg" data-fancybox="gallery-3"></a> <a href="img/gifts/026.jpg" data-fancybox="gallery-3"></a> 
+                </div>
+                <div class="services__gallery">
+                        <iframe src="https://www.youtube.com/embed/CEpT7vWolDY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe  src="https://www.youtube.com/embed/CEpT7vWolDY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section><!-- ============-->
+        <!-- НАШИ КЛИЕНТЫ-->
+        <!-- ============-->
+        <div class="container" id="section-clients">
+            <section class="section">
+                <h2 class="section-header wow fadeInUp"><span>Наши</span> клиенты</h2>
+                <div class="clients">
+                    <div class="clients__logos wow fadeInLeft">
+                        <div class="logos-slider">
+                            <div class="swiper-container" id="brands-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="logos">
+                                            <div class="logos__item"><img src="img/logos/01.jpg" alt="" /></div>
+                                            <div class="logos__item"><img src="img/logos/02.jpg" alt="" /></div>
+                                            <div class="logos__item"><img src="img/logos/03.jpg" alt="" /></div>
+                                            <div class="logos__item"><img src="img/logos/04.jpg" alt="" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="logos">
+                                                <div class="logos__item"><img src="img/logos/05.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/06.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/07.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/08.jpg" alt="" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="logos">
+                                                <div class="logos__item"><img src="img/logos/09.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/010.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/011.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/012.jpg" alt="" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="logos">
+                                                <div class="logos__item"><img src="img/logos/013.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/014.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/015.jpg" alt="" /></div>
+                                                <div class="logos__item"><img src="img/logos/016.jpg" alt="" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="logos-slider__bl"></div>
+                            <div class="logos-slider__br"></div>
+                        </div>
+                    </div>
+                    <div class="clients__slider wow fadeInRight">
+                        <div class="slider-reviews">
+                            <div class="slider-reviews__bl"></div>
+                            <div class="slider-reviews__br"></div>
+                            <div class="swiper-container" id="reviews-slider">
+                                <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                                <div class="review" style="background-image: url(img/review.jpg)">
+                                                    <div class="review__content">
+                                                        <div class="review__text">Команда PromoSolution – это высокоорганизованные профессионалы, которые всегда следят за качеством выполняемой работы и учитывают пожелания своих клиентов. Вся сувенирная и промо продукция, которую мы разрабатывали и производили с  PromoSolution, вызывала и продолжает вызывать восторг у клиентов! Благодарю сотрудников PromoSolution за крутые и яркие реализованные проекты!</div>
+                                                        <div class="review__author"><span>ольга кобзар</span><span>бренд менеджер 
+                                                                в компании «Unipharm»
+                                                                </span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                    <div class="review" style="background-image: url(img/review.jpg)">
+                                                        <div class="review__content">
+                                                            <div class="review__text">Высоким качеством полиграфических услуг сейчас сложно удивить, но «Promo Solution»  МОЖЕТ. При этом я всегда в работе руководствуюсь принципом «удивляй и запоминайся». Рада была найти «Promo Solution» - команду креативных профессионалов, которые с легкостью доработают твою идею или же предложат готовый wow-вариант. И мега важно в наше время – быстро и КАЧЕСТВЕННО! В этом, на мой взгляд, «Promo Solution» нет равных! Спасибо за сотрудничество!</div>
+                                                            <div class="review__author"><span>Эльмира Абдулкафарова</span><span>маркетолог 
+                                                                    ДП «Стада –Украина»                                                         
+                                                                    </span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                        <div class="review" style="background-image: url(img/review.jpg)">
+                                                            <div class="review__content">
+                                                                <div class="review__text">Компанию можно понять по ее сотрудникам, и хочется сказать, что это одна из лучших компаний, с которой мне довелось поработать за последние 10 лет.</div>
+                                                                <div class="review__author"><span>Александр Хмель</span><span>
+                                                                        менеджер отдела маркетинга рецептурных препаратов №2
+                                                                        ЧАО «Фармак»
+                                                                        </span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                            <div class="review" style="background-image: url(img/review.jpg)">
+                                                                <div class="review__content">
+                                                                    <div class="review__text">Самый  важный фактор успешного сотрудничества -  сочетание профессионализма и эмоциональный комфорт, обеспеченный клиентоориентированностью. Когда твоя идея успешно воплощается в жизнь  благодаря  пониманию, вовлеченности,  ответственности и прекрасному вкусу со стороны агентства, получаешь безумное удовольствие.  
+                                                                            Это заслуга людей, которые максимально вкладывают всю душу  в то, что делают.  Очень рада, что на протяжение нескольких лет  у меня есть те, кому можно довериться на все 100% .
+                                                                            Спасибо!
+                                                                            </div>
+                                                                    <div class="review__author"><span>татьяна ромашова</span><span>
+                                                                            маркетинг менеджер  
+                    XANTIS PHARMA </span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                                <div class="review" style="background-image: url(img/review.jpg)">
+                                                                    <div class="review__content">
+                                                                        <div class="review__text">С коллективом агентства  Рromo Solution работаю совсем недавно. С ними всегда найдется быстрое и уникальное решение самого каверзного и срочного запроса капризного клиента. Команда Рromo Solution всегда быстро, легко и непринужденно создаст для вас то самое желанное решение, над которым  слаженно работала вся команда. А так могут только профессионалы своего дела. Легкой и креативной работы вам, коллеги!</div>
+                                                                        <div class="review__author"><span>алла ковалева</span><span>продукт менеджер компании 
+                                                                                ООО «Асино Украина»
+                                                                                </span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                    <div class="review" style="background-image: url(img/review.jpg)">
+                                                                        <div class="review__content">
+                                                                            <div class="review__text">За всё время работы с нашей стороны поступали разного рода задачи. И какими бы «космическими» они не были, ни разу не слышал «это сделать не получится». Всегда оперативно и на высочайшем уровне идет реализация, превосходящая ожидания!</div>
+                                                                            <div class="review__author"><span>даниил семенов</span><span>бренд Менеджер Терапевтического БЮ
+                                                                                    ООО «Асино Украина»
+                                                                                    
+                                                                                    </span></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                        <div class="review" style="background-image: url(img/review.jpg)">
+                                                                            <div class="review__content">
+                                                                                <div class="review__text">С компанией Рromo Solution я реализовала много интересных проектов.  
+                                                                                        Причины, по которым я выбираю в качестве партнера эту компанию:
+                                                                                        - креативный подход к дизайну. Дизайнеры не просто выполняют поставленные задачи, но и дают советы, как сделать проект лучше и успешнее.
+                                                                                        - скорость реализации проектов: менеджеры Рromo Solution всегда выполняют работу оперативно и качественно, берутся за срочные заказы любой сложности.   
+                                                                                        - оптимальное соотношении стоимости и качества услуг. Менеджеры  компании четко выполняют  свои обязательства ответственно подходят к реализации проектов.
+                                                                                        Именно поэтому я рекомендую Рromo Solution как надежного партнера для реализации самых амбициозных проектов  по разработке и производству промоционных материалов.
+                                                                                         
+                                                                                        </div>
+                                                                                <div class="review__author"><span>Наталия Клочко</span><span>продакт менеджер 
+                                                                                        СУІП ТОВ «СПЕРКО УКРАЇНА»
+                                                                                        </span></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                            <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                <div class="review__content">
+                                                                                    <div class="review__text">СУІП ТОВ «СПЕРКО УКРАЇНА» висловлює подяку співробітникам Рromo Solution за якісне надання послуг. У процесі співпраці Рromo Solution проявили себе як надійного партнера та професійну команду, що націлені на результат. Стиль роботи команди відрізняється креативним підходом та ретельністю виконання роботи.
+                                                                                            Враховуючи позитивний досвід співпраці, ми рекомендуємо Рromo Solution як надійного партнера, який ретельно виконує взяті на себе зобов'язання та гарантує високу якість роботи.
+                                                                                            Бажаємо колективу Рromo Solution подальших успіхів, динамічного розвитку та стабільності.
+                                                                                            
+                                                                                            </div>
+                                                                                    <div class="review__author"><span>анна коржик </span><span>фахівець відділу маркетингу 
+                                                                                            СУІП ТОВ «СПЕРКО УКРАЇНА»
+                                                                                            </span></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="swiper-slide">
+                                                                                <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                    <div class="review__content">
+                                                                                        <div class="review__text">Хотела бы поделиться опытом работы с Рromo Solution в области создания образа для лонч-препарата и дизайна рекламной продукции.
+                                                                                                Надо отметить, что в отличие от других компаний очень быстро нашла общий язык и понимание с Мариной и со специалистом по дизайну Ириной. Взаимодействие на протяжение всего процесса разработки материалов проходило в очень конструктивной форме. Не взирая на частые корректировки наполнения с моей стороны, Ирина реагировала всегда спокойно, доброжелательно, оперативно, понимая все мои запросы. Результат меня очень обрадовал. Считаю эти материалы одними из лучших по дизайну среди ранее созданных. 
+                                                                                                Оформление документов о выполнении работы проведено своевременно и соответствовало обещанным срокам, что позволило не нарушить использование бюджета и план платежей.
+                                                                                                Надеюсь на дальнейшее сотрудничество. Для выполнения следующих задач в этой области планирую обратиться в первую очередь к Рromo Solution.
+                                                                                                </div>
+                                                                                        <div class="review__author"><span>Ольга Галилейская</span><span>консультант по маркетингу
+                                                                                                отдел маркетинга госпитальных препаратов
+                                                                                                ЧАО «Фармак»
+                                                                                                
+                                                                                                </span></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide">
+                                                                                    <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                        <div class="review__content">
+                                                                                            <div class="review__text">Постійно користуюсь послугами компанії. Дуже задоволений якістю, оперативністю і креативним підходом до поставлених задач. Були навіть випадки, коли треба «зробити на вчора» і все вирішувалось швидко. Надійний і перевірений часом партнер.</div>
+                                                                                            <div class="review__author"><span>Віталій Білий 
+                                                                                                    </span><span>
+                                                                                                            продакт менеджер відділу маркетингу рецептурних препаратів №2
+                                                                                                            ПАТ «Фармак»</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                            <div class="review__content">
+                                                                                                <div class="review__text">С компанией Рromo Solution сотрудничаю уже более 6 лет. Быстро и четко выполняют все запросы, умеют уловить, что нужно клиенту и подобрать несколько вариантов. Дизайнеры - профессионалы своего дела. Качественная полиграфия.  Все всегда изготавливается в оговоренные сроки. 
+                                                                                                        Помощник директора Елена - просто Бог. Я еще не знаю, что точно мне нужно, а у Елены уже готовы несколько вариантов решения. Работать с такой компанией одно удовольствие. Спасибо за ваш профессионализм.
+                                                                                                        </div>
+                                                                                                <div class="review__author"><span>оксана довженко</span><span>ассистент отдела маркетинга 
+                                                                                                                аредставительство «ЭГИС ФАРМАСЬЮТИКАЛС ПЛС»
+                                                                                                                </span></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="swiper-slide">
+                                                                                            <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                                <div class="review__content">
+                                                                                                    <div class="review__text">Хочу поблагодарить всю команду PromoSolution за работу.
+                                                                                                            Чаще всего по рабочим моментам общаюсь с дизайнерами компании. Ловлю себя на мысли, что восхищаюсь их профессионализмом и терпеливым отношением к запросам клиентов, которые часто могут быть «абстрактными».
+                                                                                                            За все время работы с компанией все поставленные задачи были выполнены наилучшим образом и в оговоренные сроки.  В наше время очень ценно иметь возможность работать с людьми, которые тебя слышат и понимают.
+                                                                                                            </div>
+                                                                                                    <div class="review__author"><span>Ольга Мацкив </span><span>продакт менеджер,
+                                                                                                            представительство «ЭГИС ФАРМАСЬЮТИКАЛС ПЛС»
+                                                                                                            
+                                                                                                            </span></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="swiper-slide">
+                                                                                                <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                                    <div class="review__content">
+                                                                                                        <div class="review__text">Рада работать с Promo Solution.
+                                                                                                                Марина вкладывает в работу душу. Всегда предупредит об возможных рисках, сложностях. Продумает нюансы за меня. Человек на которого можно положиться.
+                                                                                                                Поражаюсь до сих пор скорости выполнения качественной работы!!
+                                                                                                                Благодарю Вас и Вашу команду.
+                                                                                                                </div>
+                                                                                                        <div class="review__author"><span>мария васянович</span><span>Junior product manager
+                                                                                                                ООО «Асино Украина»
+                                                                                                                
+                                                                                                                </span></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="swiper-slide">
+                                                                                                    <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                                        <div class="review__content">
+                                                                                                            <div class="review__text">Касательно работы Promo Solution могу сказать, что коммуникация проходит легко и продуктивно.
+                                                                                                                    Правки в материалы вносятся быстро, нареканий на печать так же нет, все в рамках установленных сроков и дедлайнов.
+                                                                                                                    Отличный партнер для решения задач маркетинга компании.
+                                                                                                                    </div>
+                                                                                                            <div class="review__author"><span>Андрей Лебеда 
+                                                                                                                    </span><span>Product Manager prescription medicine
+                                                                                                                            Boehringer Ingelheim RCV GmbH & Co KG
+                                                                                                                            </span></div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                               
+                                                                                                <div class="swiper-slide">
+                                                                                                        <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                                            <div class="review__content">
+                                                                                                                <div class="review__text">Компания Асино Украина выражает огромную благодарность сотрудникам компании Promo Solution за профессионализм и оперативный подход к работе!
+                                                                                                                        За время сотрудничества рекламное агентство зарекомендовало себя в качестве надежного и стабильного партнера, выполняющего все данные обязательства качественно и в срок.
+                                                                                                                        </div>
+                                                                                                                <div class="review__author"><span>с благодарностью</span><span>отдел регистрации в Украине компании 
+                                                                                                                        ООО «Асино Украина»
+                                                                                                                        
+                                                                                                                        </span></div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    <div class="swiper-slide">
+                                                                                                        <div class="review" style="background-image: url(img/review.jpg)">
+                                                                                                            <div class="review__content">
+                                                                                                                <div class="review__text">Дякую Рromo Solution за гарну командну роботу, вчасне виконання завдань, високий професіоналізм та розуміння «прекрасного»! 
+                                                                                                                        Дизайнери у своїй роботі продумують усі кроки наперед, вимірюють деталі до пікселя, намагаються зробити дизайн простим та зрозумілим, щоб ним було легко користуватися, зберігаючи його естетичність. Всім гарного настрою та міцного здоров‘я!
+                                                                                                                        </div>
+                                                                                                                <div class="review__author"><span>алла мілєвська</span><span>консультант з маркетингу Відділу маркетингу рецептурних препаратів 
+                                                                                                                        ПАТ «Фармак»
+                                                                                                                         </span></div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="review" style="background-image: url(img/review.jpg)">
+                                            <div class="review__content">
+                                                <div class="review__text">Огромная благодарность за качественную, а главное вовремя сделанную работу - печать материалов и брендирование сувенирной продукции. Отдельно  хочу выразить благодарность дизайнеру Ирине за ее терпение, позитив и идеи, которые креативно смотрятся на всей печатной продукции!</div>
+                                                <div class="review__author"><span>Владимир  Завгородний</span><span>менеджер по маркетингу,
+                                                        представительство «Adamed Pharma» S.A.  в Украине
+                                                        </span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="review" style="background-image: url(img/review.jpg)">
+                                            <div class="review__content">
+                                                <div class="review__text">Подтверждено многократно - все будет сделано на высшем уровне: креативно, красиво, качественно, быстро. Замечательная команда, с которой всегда приятно работать (смайл)</div>
+                                                <div class="review__author"><span>Юлия Дудник </span><span>менеджер по маркетингу, 
+                                                        представительство «Adamed Pharma» S.A.  в Украине</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                            <div class="review" style="background-image: url(img/review.jpg)">
+                                                <div class="review__content">
+                                                    <div class="review__text">Мы уже несколько лет сотрудничаем с Рromo Solution в реализации проектов по разработке, дизайну и производству различных видов сувенирной и печатной продукции. 
+                                                            За время выполнения наших проектов Рromo Solution проявили себя как высокий профессионал с наличием квалифицированных кадров, которые используют нестандартный подход. Компания оперативно и качественно решает поставленные нами задачи при лояльной ценовой политике. Хотим отметить, что каждая задача решается с глубоким пониманием наших интересов и приоритетов. 
+                                                            Успешный опыт сотрудничества позволяет нам рекомендовать компанию Рromo Solution как добросовестного и надежного партнера. 
+                                                            </div>
+                                                    <div class="review__author"><span>Кристина Кривошеина </span><span>руководитель отдела коммуникаций и связей с общественностью 
+                                                            швейцарской фармацевтической компании Асино в Украине и СНГ
+                                                            </span></div>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                </div>
+                                <div class="slider-reviews__back"></div>
+                                <div class="slider-reviews__next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div><!-- =============-->
+        <!-- НАШИ ПАРТНЕРЫ-->
+        <!-- =============-->
+        <section class="section section_accent">
+            <div class="container">
+                <h2 class="section-header wow fadeInUp"><span>Наши</span> партнеры</h2>
+                <div class="partners">
+                    <div class="partners__item wow fadeInLeft">
+                        <div class="partners__logo"><img src="img/promostand-indoor.png" alt="" /></div>
+                        <div class="partners__about">Размещение рекламы в бизнес-центрах, жилых комплексах, ВУЗах, фитнес-центрах</div><a class="button button_a" href="">Перейти на сайт</a>
+                    </div>
+                    <div class="partners__item wow fadeInRight">
+                        <div class="partners__logo"><img src="img/promostand-indoor.png" alt="" /></div>
+                        <div class="partners__about">Размещение рекламы в бизнес-центрах, жилых комплексах, ВУЗах, фитнес-центрах</div><a class="button button_a" href="">Перейти на сайт</a>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ============-->
+        <!-- НАША КОМАНДА-->
+        <!-- ============-->
+        <div class="container" id="section-team">
+            <section class="section">
+                <h2 class="section-header wow fadeInUp"><span>Наша</span> команда</h2>
+                <div class="team-slider wow fadeIn">
+                    <div class="swiper-container" id="team-slider">
+                        <div class="swiper-wrapper"><a class="swiper-slide" href="img/team.png" data-fancybox="gallery-team"><img src="img/team.png" alt="" /></a><a class="swiper-slide" href="img/team.png" data-fancybox="gallery-team"><img src="img/team.png" alt="" /></a><a class="swiper-slide" href="img/team.png" data-fancybox="gallery-team"><img src="img/team.png" alt="" /></a><a class="swiper-slide" href="img/team.png" data-fancybox="gallery-team"><img src="img/team.png" alt="" /></a></div>
+                        <div class="team-slider__back"></div>
+                        <div class="team-slider__next"></div>
+                    </div>
+                </div>
+                <div class="welcome">
+                    <div class="welcome__title">Присоединяйтесь к нашей команде профессионалов</div><a class="button button_b" href="">Посмотреть вакансии</a>
+                </div>
+            </section>
+        </div><!-- ======-->
+        <!-- FOOTER-->
+        <!-- ======-->
+        <footer class="footer" id="section-footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__logo"><img src="img/logo-white.png" alt="" /></div>
+                    <ul class="footer__contacts">
+                        <li><svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#map-marker"></use>
+                            </svg><span>Киев, ул. Ямская, 35/34</span></li>
+                        <li><svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#phone"></use>
+                            </svg><a href="tel:0973332997">+38 (097) 333 29 97</a></li>
+                    </ul>
+                    <div class="footer__emails">
+                        <div class="mailer"><svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#email"></use>
+                            </svg>
+                            <div class="mailer__list"><a href="mailto:info@promosolution.kiev.ua">info@promosolution.kiev.ua</a><br /><a href="mailto:sales@promosolution.kiev.ua">sales@promosolution.kiev.ua</a><br /><a href="mailto:job@promosolution.kiev.ua">job@promosolution.kiev.ua</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
