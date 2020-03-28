@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+.options>span {
+    width: calc(11% - 10px);
+    margin-right: 10px;
+    min-width: 100px;
+}
+.button_e, .button_ebig {text-align:center;line-height:1rem; padding-left:5px;
+    padding: 14px 5px;
+    font-weight: 700;font-size: 0.7rem;
+}
+
+.button_e img {position: static; margin:0 auto 10px;display: block;transform:none;
+    left: 12px;
+    width: 30px; height:30px
+}
+.windowsills {justify-content: space-evenly; margin-bottom: 0}
+.windowsills div {display: -webkit-box; display: flex; flex-direction: column; text-align: center; font-size: 0.9rem; margin: 0 10px}
+.windowsills img {max-width: 100px; margin:10px auto}
+
+.artimage-slides {   display: -webkit-box;
+    display: flex;
+}
+.artimage-slides img {height:509px; -o-object-fit: cover; object-fit: cover;}
+.tree__img>img {
+    max-width: 100px;
+    border: solid 5px #fff;
+    box-shadow: 0 13px 16px rgba(145,117,86,.32);
+    border-radius: 18px;
+}
+a.tkachuk {color: #ffc700}
+.button_f {
+    position: relative;
+}
+
+@media only screen and (max-width:575.98px){
+.menu_phone {        z-index: 111;       position: fixed;        left: 10px; bottom: 30px;       display: -webkit-box;
+    display: -webkit-flex;        display: -ms-flexbox;        display: flex;   margin: 0; padding: 0; list-style: none;       -webkit-transition: -webkit-transform 1s ease;        transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;        transition: transform 1s ease;           -webkit-transform: translateX(-100%);        -ms-transform: translateX(-100%);
+    transform: translateX(-100%);}
+ .menu_phone a {background: #12772a; width: 40px; height: 40px; border-radius: 50%; display: -webkit-box; display:flex; align-items: start; padding-top: 5px; justify-content: center; box-sizing: border-box; margin-right: 10px}
+ .menu_phone li:nth-child(1) a {background: #00a0ff}
+ .menu_phone li:nth-child(2) a {background: #f91600}
+ .menu_phone li:nth-child(3) a {background: #104e9f}
+    .menu_phone img {max-width: 30px}
+    .menu_phone.active {            -webkit-transform: translateX(0);            -ms-transform: translateX(0);            transform: translateX(0);        }
+    .hamburger {   z-index:111; display: block;            position: fixed;            bottom: 30px;            right: 20px;            width: 50px;  height: 50px; background: #ffc700; border-radius: 50%;          -webkit-transition: left .35s ease;            -o-transition: left .35s ease;            transition: left .35s ease;      padding: 5px; box-sizing: border-box;  }
+    .hamburger img {            max-width: 100%;         }
+    .hamburger .close {     position:absolute; top: calc(50% - 10px); width: 20px; left:calc(50% - 10px);       opacity: 0;   -webkit-transition: -webkit-transform 1s ease;        transition: -webkit-transform 1s ease;
+        -o-transition: transform 1s ease;        transition: transform 1s ease;         }
+
+    .hamburger.active  img {            opacity: 0;        }
+    .hamburger.active  .close {            opacity: 1;        }
+
+    .intro {padding-bottom: 100px}
+    .intro__header {
+        font-size: 1.7rem;
+    }
+    .intro__content {position: static}
+    .intro__act {position: absolute; bottom: 30px; left: calc(50% - 135px)}
+    .intro__decor {
+        position: static;
+        padding: 30px;
+     display: block; text-align: right}
+  
+    .intro__decor>img {
+display: inline-block;
+        width: 200px;
+    }
+    .intro__badge_1 {
+        bottom: 300px;
+    }
+    .intro__badge_2 {
+        bottom: 180px;
+        left: 0;
+    }
+    .header-wadd__add {margin:0;
+        position: absolute;
+        top: 535px;
+    }
+
+.rules1997 {padding-bottom: 150px}
+    .articlenav {    position: absolute; margin: 0; left:calc(50% - 108px);
+        bottom: -90px;}
+        .rules1997 .article-image {
+    padding-right: 0;}
+    .artimage-slides img {
+        height: 400px;
+    }
+    .trees__item {
+        width: calc(50% - 8px);
+    }
+    .promo {display: block}
+    .promo__img {width: 300px; display: block; -webkit-transform: none;
+        -ms-transform: none;
+        transform: none; top: 30%; }
+        .promo__act {margin-top: 400px}
+        .partners__item {
+            width: calc(50% - 30px);
+        }
+        .select-linelist .button {
+            width: 43%;
+            min-width: 0;        }
+            #allproducts.section {padding-top: 0}
+}
