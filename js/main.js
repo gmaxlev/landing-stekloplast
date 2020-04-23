@@ -3,10 +3,20 @@ $(document).ready(function() {
   //    live: false
   //  });
 
+  /* 
+    Открыть окно через 30 секунд
+  */
+
+  setTimeout(function() {
+    openModal("modal-1");
+  }, 30000);
+
+  var modalIsOpen = false;
+
   $("[data-modal]").on("click", function(e) {
     e.preventDefault();
     var id = $(this).attr("data-modal");
-    $("#" + id).fadeIn();
+    openModal(id);
   });
 
   $(".modal__dark, .win__close").on("click", function(e) {
@@ -14,7 +24,16 @@ $(document).ready(function() {
     $(this)
       .closest(".modal")
       .fadeOut();
+    modalIsOpen = false;
   });
+
+  function openModal(id) {
+    if (modalIsOpen) return;
+    modalIsOpen = true;
+    $("#" + id).fadeIn();
+  }
+
+  window.openModal = openModal;
 
   /**
    * Маска для номера телефона
@@ -353,6 +372,21 @@ $(document).ready(function() {
                 $(form)
                   .find(".button")
                   .prop("disabled", true);
+
+                /* 
+
+                // змінна form - це DOM об'єкт відправленої форми
+                
+                // Ім'я форми (атрибут name)
+                var formName = $(form).attr('name');
+
+                // Дані форми
+                var formData = $(form).serializeArray();
+
+                // ga("send", "event", "cost", "calculate");
+                
+                */
+
                 setTimeout(function() {
                   $(form)
                     .closest(".modal")

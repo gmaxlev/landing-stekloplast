@@ -33,18 +33,26 @@
   position: static;
   margin: 0 auto 10px;
   display: block;
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
   left: 12px;
   width: 30px;
   height: 30px;
 }
 .windowsills {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   margin-bottom: 0;
 }
 .windowsills div {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
   font-size: 0.9rem;
@@ -57,6 +65,7 @@
 
 .artimage-slides {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .artimage-slides img {
@@ -67,6 +76,7 @@
 .tree__img > img {
   max-width: 100px;
   border: solid 5px #fff;
+  -webkit-box-shadow: 0 13px 16px rgba(145, 117, 86, 0.32);
   box-shadow: 0 13px 16px rgba(145, 117, 86, 0.32);
   border-radius: 18px;
 }
@@ -82,6 +92,8 @@ a.tkachuk {
 }
 
 .messengers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 10px auto 0;
   max-width: 250px;
@@ -90,8 +102,14 @@ a.tkachuk {
   width: 50%;
   padding: 15px;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-weight: 500;
   font-size: 0.9rem;
@@ -186,25 +204,30 @@ a.tkachuk {
   }
 
   .menu_phone {
-    z-index: 111;
+    z-index: 110;
     position: fixed;
     right: 30px;
-    bottom: 150px;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
-    -webkit-transition: -webkit-transform 1s ease;
-    transition: -webkit-transform 1s ease;
-    -o-transition: transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: translateY(200%);
-    -ms-transform: translateY(200%);
-    transform: translateY(200%);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    height: 1px;
+    bottom: 65px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: bottom 1s, height 1s, opacity 1s;
+    -o-transition: bottom 1s, height 1s, opacity 1s;
+    transition: bottom 1s, height 1s, opacity 1s;
+  }
+
+  .menu_phone > li:first-child > a {
+    margin-top: 0;
   }
 
   .menu_phone a {
@@ -213,10 +236,16 @@ a.tkachuk {
     height: 50px;
     border-radius: 50%;
     display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
     padding-top: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-top: 10px;
   }
@@ -233,9 +262,8 @@ a.tkachuk {
     max-width: 30px;
   }
   .menu_phone.active {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
+    height: 300px;
+    opacity: 1;
   }
   .hamburger {
     z-index: 111;
@@ -251,6 +279,7 @@ a.tkachuk {
     -o-transition: left 0.35s ease;
     transition: left 0.35s ease;
     padding: 15px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     box-shadow: 0 0 10px #666;
     -webkit-box-shadow: 0 0 10px #666;
@@ -268,6 +297,7 @@ a.tkachuk {
     transition: -webkit-transform 1s ease;
     -o-transition: transform 1s ease;
     transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
   }
 
   .hamburger.active img {
@@ -396,6 +426,8 @@ a.tkachuk {
 }
 
 #countries-list {
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
