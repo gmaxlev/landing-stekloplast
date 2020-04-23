@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  new WOW().init({
-    live: false
-  });
+//  new WOW().init({
+//    live: false
+//  });
 
   $("[data-modal]").on("click", function(e) {
     e.preventDefault();
@@ -80,21 +80,21 @@ $(document).ready(function() {
         Если есть разделение по странам
       */
       if (typeof $(this).attr("with-countries") === typeof undefined) {
-        $("#countries-list").css("opacity", "0");
+        $("#countries-list").css("display", "none");
       } else {
-        $("#countries-list").css("opacity", "1");
+        $("#countries-list").css("display", "block");
       }
       if (animate) return;
       var index = $(this).index();
       if (index == current) return;
       animate = true;
       $("#allproducts").show();
-      $("html, body").animate(
-        {
-          scrollTop: $("#allproducts").offset().top
-        },
-        2000
-      );
+//      $("html, body").animate(
+  //      {
+    //      scrollTop: $("#allproducts").offset().top
+      //  },
+  //      2000
+    //  );
       $(this)
         .parent()
         .find(".button_d_active")
@@ -117,12 +117,12 @@ $(document).ready(function() {
       var index = $(this).index();
       if (index == country) return;
       $("#allproducts").show();
-      $("html, body").animate(
-        {
-          scrollTop: $("#allproducts").offset().top
-        },
-        2000
-      );
+ //     $("html, body").animate(
+   //     {
+     //     scrollTop: $("#allproducts").offset().top
+       // },
+ //       2000
+   //   );
       $(this)
         .parent()
         .find("button")
@@ -291,7 +291,7 @@ $(document).ready(function() {
 
   (function() {
     /* 
-      Окно "Подобрать тур"
+      Форма "Рассчитать стоимость"
     */
 
     $(".modal-form-simple").each(function() {
@@ -345,6 +345,7 @@ $(document).ready(function() {
                 $(form)
                   .siblings(".formcomplete_ok")
                   .slideDown(500);
+                  ga("send", "event", "cost", "calculate");
                 $(form)
                   .find(".input-text, .textarea")
                   .prop("disabled", true)
@@ -356,7 +357,7 @@ $(document).ready(function() {
                   $(form)
                     .closest(".modal")
                     .fadeOut();
-                }, 4000);
+                }, 2000);
               },
               error: function() {
                 $(form)

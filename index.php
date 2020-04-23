@@ -40,6 +40,17 @@
 
         });
     </script>
+
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          
+            ga('create', 'UA-163916879-1', 'auto');
+            ga('send', 'pageview');
+          setTimeout("ga('send','event','Engaged users','More than 15 seconds')",15000); 
+          </script>
 </head>
 
 <body>
@@ -62,8 +73,8 @@
                     </div>
                     <div class="formcomplete formcomplete_error"> Неможливо відправити. </div>
                     <P> Або напишіть в зручний месенджер
-                        <div class="messengers"><a href="viber://chat?number=380500350403" class="viber" onclick="ga('send', 'event', 'price', 'get')"><img src="img/viber.png"><span>Viber</span></a><br>
-                            <a href="tg://resolve?domain=SPlast_Kyiv" class="telegram" onclick="ga('send', 'event', 'price', 'get')"><img src="img/telegram.png"><span>Telegram</span></a></div>
+                        <div class="messengers"><a href="viber://chat?number=380500350403" class="viber" onclick="ga('send', 'event', 'contact', 'make')"><img src="img/viber.png"><span>Viber</span></a><br>
+                            <a href="tg://resolve?domain=SPlast_Kyiv" class="telegram" onclick="ga('send', 'event', 'contact', 'make')"><img src="img/telegram.png"><span>Telegram</span></a></div>
             </div>
         </div>
     </div><!-- ============================-->
@@ -85,8 +96,8 @@
                     </div>
                     <div class="formcomplete formcomplete_error"> Неможливо відправити. </div>
                     <P> Або напишіть в зручний месенджер
-                        <div class="messengers"><a href="viber://chat?number=380500350403" class="viber" onclick="ga('send', 'event', 'price', 'get')"><img src="img/viber.png"><span>Viber</span></a><br>
-                            <a href="tg://resolve?domain=SPlast_Kyiv" class="telegram" onclick="ga('send', 'event', 'price', 'get')"><img src="img/telegram.png"><span>Telegram</span></a></div>
+                        <div class="messengers"><a href="viber://chat?number=380500350403" class="viber" onclick="ga('send', 'event', 'contact', 'make')"><img src="img/viber.png"><span>Viber</span></a><br>
+                            <a href="tg://resolve?domain=SPlast_Kyiv" class="telegram" onclick="ga('send', 'event', 'contact', 'make')"><img src="img/telegram.png"><span>Telegram</span></a></div>
             </div>
         </div>
     </div><!-- ============================-->
@@ -108,8 +119,8 @@
                     </div>
                     <div class="formcomplete formcomplete_error"> Неможливо відправити. </div>
                     <P> Або напишіть в зручний месенджер
-                        <div class="messengers"><a href="viber://chat?number=380500350403" class="viber" onclick="ga('send', 'event', 'price', 'get')"><img src="img/viber.png"><span>Viber</span></a><br>
-                            <a href="tg://resolve?domain=SPlast_Kyiv" class="telegram" onclick="ga('send', 'event', 'price', 'get')"><img src="img/telegram.png"><span>Telegram</span></a></div>
+                        <div class="messengers"><a href="viber://chat?number=380500350403" class="viber" onclick="ga('send', 'event', 'contact', 'make')"><img src="img/viber.png"><span>Viber</span></a><br>
+                            <a href="tg://resolve?domain=SPlast_Kyiv" class="telegram" onclick="ga('send', 'event', 'contact', 'make')"><img src="img/telegram.png"><span>Telegram</span></a></div>
             </div>
         </div>
     </div><!-- ============================-->
@@ -131,8 +142,8 @@
                     </div>
                     <div class="formcomplete formcomplete_error"> Неможливо відправити. </div>
                     <P> Або напишіть в зручний месенджер
-                        <div class="messengers"><a href="viber://chat?number=380500350403" class="viber" onclick="ga('send', 'event', 'price', 'get')"><img src="img/viber.png"><span>Viber</span></a><br>
-                            <a href="tg://resolve?domain=SPlast_Kyiv" class="telegram" onclick="ga('send', 'event', 'price', 'get')"><img src="img/telegram.png"><span>Telegram</span></a></div>
+                        <div class="messengers"><a href="viber://chat?number=380500350403" class="viber" onclick="ga('send', 'event', 'contact', 'make')"><img src="img/viber.png"><span>Viber</span></a><br>
+                            <a href="tg://resolve?domain=SPlast_Kyiv" class="telegram" onclick="ga('send', 'event', 'contact', 'make')"><img src="img/telegram.png"><span>Telegram</span></a></div>
             </div>
         </div>
     </div><!-- ============-->
@@ -162,7 +173,7 @@
                         <div class="logo">
                             <div class="logo__image"><img src="img/logo.png" alt="" /></div>
                             <div class="logo__text">Представництво заводу Stekloplast <br>у Києві та області. Вікна за правилами з 1997 року</div>
-                            <div class="logo__social"><a href="https://www.facebook.com/stekloplastkyiv"><img src="img/icons8_facebook_old_26px.png" alt="" /></a><a href="https://www.instagram.com/stekloplast_kyiv"><img src="img/icons8_instagram_26px.png" alt="" /></a><a href="ru.html">RU</a></div>
+                            <div class="logo__social"><a href="https://www.facebook.com/stekloplastkyiv"><img src="img/icons8_facebook_old_26px.png" target="_blank" alt="" /></a><a href="https://www.instagram.com/stekloplast_kyiv"><img src="img/icons8_instagram_26px.png"  target="_blank"  alt="" /></a><a href="ru.php">RU</a></div>
                         </div>
                     </div>
                     <div class="header__contacts">
@@ -182,7 +193,7 @@
                     <div class="intro__content">
                         <h1 class="intro__header wow fadeInUp"> Металопластикові вікна від виробника </h1>
                             <div class="intro__promo wow fadeInUp" data-wow-delay="0.2s"> <img src="img/icons8_discount_50px.png" alt="" />
-                            <div> Тільки <b> до 30 квітня </b> акція: <br> 5-камерний профіль за ціною 3-камерного! </div>
+                            <div> Тільки <b> до <?php echo date('t.m'); ?> </b> акція: <br> 5-камерний профіль за ціною 3-камерного! </div>
                             </div>
                             <div class="intro__act wow fadeInUp" data-wow-delay="0.4s"> <button class="button button_a" data-modal="modal-1"> Розрахувати вартість </button> </div>
                             </div>
@@ -1529,12 +1540,12 @@
                                                 
                                                     <div class="litle-header">Цвета</div>
                                                     <div class="options windowsills">
-                                                        <div> <img src="./ img/wds/1.jpg"> Античний мармур </div>
-                                                             <div> <img src="./ img/wds/2.jpg"> Темна вишня </div>
-                                                             <div> <img src="./ img/wds/3.jpg"> Золотий дуб </div>
-                                                             <div> <img src="./ img/wds/4.jpg"> Димчастий граніт </div>
-                                                             <div> <img src="./ img/wds/5.jpg"> Дуб Монтана </div>
-                                                             <div> <img src="./ img/wds/6.jpg"> Горіх </div>
+                                                        <div> <img src="./img/wds/1.jpg"> Античний мармур </div>
+                                                             <div> <img src="./img/wds/2.jpg"> Темна вишня </div>
+                                                             <div> <img src="./img/wds/3.jpg"> Золотий дуб </div>
+                                                             <div> <img src="./img/wds/4.jpg"> Димчастий граніт </div>
+                                                             <div> <img src="./img/wds/5.jpg"> Дуб Монтана </div>
+                                                             <div> <img src="./img/wds/6.jpg"> Горіх </div>
             
                                                     </div>
                                                 <div class="toact"><button class="button button_f" data-modal="modal-1">Розрахувати вартість</button></div>
@@ -1574,18 +1585,18 @@
                                                     
                                                         <div class="litle-header"> Кольори </div>
                                                             <div class="options windowsills">
-                                                            <div> <img src="./ img/sauberg/01.jpg"> Білий глянець </div>
-                                                            <div> <img src="./ img/sauberg/02.jpg"> Білий дуб глянець </div>
-                                                            <div> <img src="./ img/sauberg/03.jpg"> Мармур глянець </div>
-                                                            <div> <img src="./ img/sauberg/04.jpg"> Золотий дуб глянець </div>
-                                                            <div> <img src="./ img/sauberg/05.jpg"> Горіх глянець </div>
-                                                            <div> <img src="./ img/sauberg/06.jpg"> Темний дуб глянець </div> </div>
-                                                            <P> <div class="options windowsills"> <div> <img src="./ img/sauberg/07.jpg"> Білий матовий </div>
-                                                            <div> <img src="./ img/sauberg/08.jpg"> Мармур матовий </div>
-                                                            <div> <img src="./ img/sauberg/09.jpg"> Вінчестер матовий </div>
-                                                            <div> <img src="./ img/sauberg/10.jpg"> Золотий дуб матовий </div>
-                                                            <div> <img src="./ img/sauberg/11.jpg"> Горіх матовий </div>
-                                                            <div> <img src="./ img/sauberg/12.jpg"> Антрацит матовий </div>
+                                                            <div> <img src="./img/sauberg/01.jpg"> Білий глянець </div>
+                                                            <div> <img src="./img/sauberg/02.jpg"> Білий дуб глянець </div>
+                                                            <div> <img src="./img/sauberg/03.jpg"> Мармур глянець </div>
+                                                            <div> <img src="./img/sauberg/04.jpg"> Золотий дуб глянець </div>
+                                                            <div> <img src="./img/sauberg/05.jpg"> Горіх глянець </div>
+                                                            <div> <img src="./img/sauberg/06.jpg"> Темний дуб глянець </div> </div>
+                                                            <P> <div class="options windowsills"> <div> <img src="./img/sauberg/07.jpg"> Білий матовий </div>
+                                                            <div> <img src="./img/sauberg/08.jpg"> Мармур матовий </div>
+                                                            <div> <img src="./img/sauberg/09.jpg"> Вінчестер матовий </div>
+                                                            <div> <img src="./img/sauberg/10.jpg"> Золотий дуб матовий </div>
+                                                            <div> <img src="./img/sauberg/11.jpg"> Горіх матовий </div>
+                                                            <div> <img src="./img/sauberg/12.jpg"> Антрацит матовий </div>
                                                             </div>
                                                     <div class="toact"><button class="button button_f" data-modal="modal-1">Розрахувати вартість</button></div>
                                                     <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
@@ -1622,12 +1633,12 @@
                                                         
                                                             <div class="litle-header"> Кольори </div>
                                                                  <div class="options windowsills">
-                                                                 <div> <img src="./ img/plastolit/01.png"> Білий </div>
-                                                                 <div> <img src="./ img/plastolit/02.png"> Мармур </div>
-                                                                 <div> <img src="./ img/plastolit/03.png"> Бежевий мармур </div>
-                                                                 <div> <img src="./ img/plastolit/04.png"> Золотий дуб </div>
-                                                                 <div> <img src="./ img/plastolit/05.png"> Рустикальний дуб </div>
-                                                                 <div> <img src="./ img/plastolit/06.png"> Венге </div>
+                                                                 <div> <img src="./img/plastolit/01.png"> Білий </div>
+                                                                 <div> <img src="./img/plastolit/02.png"> Мармур </div>
+                                                                 <div> <img src="./img/plastolit/03.png"> Бежевий мармур </div>
+                                                                 <div> <img src="./img/plastolit/04.png"> Золотий дуб </div>
+                                                                 <div> <img src="./img/plastolit/05.png"> Рустикальний дуб </div>
+                                                                 <div> <img src="./img/plastolit/06.png"> Венге </div>
                                                             </div>
                                                         <div class="toact"><button class="button button_f" data-modal="modal-1">Розрахувати вартість</button></div>
                                                         <div class="decor decor_1"><img src="img/measure_tape_PNG32.png" alt="" /></div>
@@ -2059,7 +2070,7 @@
                 <div class="promo">
                     <div class="promo__content">
                         <div class="promo__header wow jackInTheBox">Акція! </div>
-                             <div class="promo__text wow jackInTheBox"> Тільки <b> до 30 квітня </b> акція: <br> 5-камерний профіль за ціною 3-камерного! </div>
+                             <div class="promo__text wow jackInTheBox"> Тільки <b> до <?php echo date('t.m'); ?> </b> акція: <br> 5-камерний профіль за ціною 3-камерного! </div>
                         <div class="promo__img"><img class="wow fadeInRight" src="img/profile2.png" alt="" /></div>
                         <div class="promo__act wow jackInTheBox"><button class="button button_f" data-modal="modal-1">Розрахувати вартість</button></div>
                     </div>
@@ -2128,7 +2139,7 @@
                 <div class="decor decor_5"><img src="img/SP_2000_aluplast.png" alt="" /></div>
                 <div class="decor decor_33"><img src="img/lines/lines22.png" alt="" /></div>
                 <div class="footer__header">Підпишіться на нас у соцмережах, <br> щоб стежити за акціями та новинами!</div>
-                <div class="socs"><a class="socs__item" href="">
+                <div class="socs"><a class="socs__item" href="https://www.instagram.com/stekloplast_kyiv" target="_blank">
                         <div class="socs__lines"><span></span><span></span></div><svg class="svgspr" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#svg_instagram"></use>
                         </svg>
@@ -2136,7 +2147,7 @@
                         <div class="socs__lines"><span></span><span></span></div><svg class="svgspr" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#svg_viber"></use>
                         </svg>
-                    </a><a class="socs__item" href="">
+                    </a><a class="socs__item" href="https://www.facebook.com/stekloplastkyiv" target="_blank">
                         <div class="socs__lines"><span></span><span></span></div><svg class="svgspr" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#svg_facebook"></use>
                         </svg>
