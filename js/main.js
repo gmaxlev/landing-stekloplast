@@ -1,7 +1,7 @@
 $(document).ready(function() {
-//  new WOW().init({
-//    live: false
-//  });
+  //  new WOW().init({
+  //    live: false
+  //  });
 
   $("[data-modal]").on("click", function(e) {
     e.preventDefault();
@@ -89,12 +89,12 @@ $(document).ready(function() {
       if (index == current) return;
       animate = true;
       $("#allproducts").show();
-//      $("html, body").animate(
-  //      {
-    //      scrollTop: $("#allproducts").offset().top
+      //      $("html, body").animate(
+      //      {
+      //      scrollTop: $("#allproducts").offset().top
       //  },
-  //      2000
-    //  );
+      //      2000
+      //  );
       $(this)
         .parent()
         .find(".button_d_active")
@@ -117,12 +117,12 @@ $(document).ready(function() {
       var index = $(this).index();
       if (index == country) return;
       $("#allproducts").show();
- //     $("html, body").animate(
-   //     {
-     //     scrollTop: $("#allproducts").offset().top
-       // },
- //       2000
-   //   );
+      //     $("html, body").animate(
+      //     {
+      //     scrollTop: $("#allproducts").offset().top
+      // },
+      //       2000
+      //   );
       $(this)
         .parent()
         .find("button")
@@ -345,7 +345,7 @@ $(document).ready(function() {
                 $(form)
                   .siblings(".formcomplete_ok")
                   .slideDown(500);
-                  ga("send", "event", "cost", "calculate");
+                ga("send", "event", "cost", "calculate");
                 $(form)
                   .find(".input-text, .textarea")
                   .prop("disabled", true)
